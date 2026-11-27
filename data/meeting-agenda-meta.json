@@ -1,12 +1,4 @@
 {
-  "telluride|2026-10-27|Town Council - Oct 27 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8045",
-    "sv": 4,
-    "zoomUrl": "https://us06web.zoom.us/meeting/register/DaEVzy_NTsub9PbJHzPwTg",
-    "meetingId": "896 6851 5669",
-    "passcode": "714517.",
-    "phone": "719) 359-4580"
-  },
   "county|2026-10-28|Board of County Commissioners Work Session": {
     "sv": 4,
     "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1036/files/agenda/2056",
@@ -229,26 +221,6 @@
     "meetingId": "861 6987 1704",
     "passcode": "281002.",
     "phone": "346-248-7799"
-  },
-  "tmvoa|2026-10-27|TMVOA Finance &amp; Budget Committee": {
-    "sv": 4,
-    "ph": "b858cb282617fb09"
-  },
-  "ouray|2026-10-27|Board of County Commissioners": {
-    "agendaUrl": "https://ouraycoco.portal.civicclerk.com/event/1081/files/agenda/7575",
-    "zoomUrl": "https://us06web.zoom.us/j/87606375697?pwd=F4epE8XNbLwY5HjLUYeETbwoQsL0ps.1",
-    "meetingId": "876 0637 5697",
-    "passcode": "946299",
-    "phone": "346-248-7799",
-    "sv": 4
-  },
-  "ouray|2026-10-27|Board of County Commissioners Work Session": {
-    "agendaUrl": "https://ouraycoco.portal.civicclerk.com/event/1105/files/agenda/7571",
-    "zoomUrl": "https://us06web.zoom.us/j/87606375697?pwd=F4epE8XNbLwY5HjLUYeETbwoQsL0ps.1",
-    "meetingId": "876 0637 5697",
-    "passcode": "946299",
-    "phone": "346-248-7799",
-    "sv": 4
   },
   "ouray|2026-10-28|Board of County Commissioners Work Session": {
     "agendaUrl": "https://ouraycoco.portal.civicclerk.com/event/1129/files/agenda/7573",

@@ -28,19 +28,6 @@
     "endDate": "2026-11-30"
   },
   {
-    "title": "An Outlaw Thanksgiving at Alloy Kitchen",
-    "href": "https://koto.org/event/an-outlaw-thanksgiving-at-alloy-kitchen/",
-    "date": "2026-11-26",
-    "time": "2:00 PM",
-    "location": "Mountain Lodge Telluride, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/mountainvillage.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "An Outlaw Thanksgiving at Alloy Kitchen in Mountain Lodge Telluride, Mountain Village. A fire-lit Thanksgiving buffet with live music on Thursday, November 26, from 2 to 6 PM. Reservations through OpenTable.",
-    "type": "Music"
-  },
-  {
     "title": "Live Music in the Après Lounge at Mountain Lodge Telluride",
     "href": "https://koto.org/event/live-music-in-the-apres-lounge-at-mountain-lodge-telluride/2026-11-26/",
     "date": "2026-11-26",
@@ -103,7 +90,7 @@
     "img": "https://localist-images.azureedge.net/photos/54366527548837/huge/4c3995fa47f3b861d61e318e7dafd3cbfa9b02e9.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "A community photo contest and fundraiser hosted by Voyager in which locals of all ages from the northern San Juan region submit real, unedited photos for a chance to be named Gaper of the Year. Voting takes place during Gaper Week,…",
+    "desc": "Voyager's New FUNdraiser Locals of all ages from the northern San Juan region submit photos for a chance to be a famed Gaper of the Year. No AI or photoshopped photos please. Voting happens during Gaper Week Nov. 21-29, 2026 (opening week…",
     "type": "Community",
     "endDate": "2026-11-29"
   },
@@ -122,19 +109,6 @@
     "endDate": "2026-12-31"
   },
   {
-    "title": "Turkey Trot 2026",
-    "href": "https://koto.org/event/turkey-trot-2026/",
-    "date": "2026-11-26",
-    "time": "9:00 AM",
-    "location": "",
-    "town": "",
-    "img": "https://koto.org/wp-content/uploads/2026/11/Turkey-Trot-English-Digital.png",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Dust off those tennis shoes and tail feathers – the Turkey Trot is back! This 5K walk/run is free and fun for the whole family (even Fido!). Sign up online in advance to be entered into a raffle, with additional prizes for the fastest…",
-    "type": "Outdoors & Sports"
-  },
-  {
     "title": "Thanksgiving Break - Ridgway Schools",
     "href": "https://events.ourayridgwayevents.com/event/thanksgiving-break-ridgway-schools",
     "date": "2026-11-26",
@@ -144,7 +118,7 @@
     "img": "https://localist-images.azureedge.net/photos/52196842516113/huge/34c03f502c2e6b24c2bdceae7a155d7b6d463e8f.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Thanksgiving Break for Ridgway Schools marks a scheduled holiday recess for students and staff in the Ridgway school district. This break falls over the Thanksgiving holiday period, giving families time off together during the late…",
+    "desc": "",
     "type": "Community",
     "endDate": "2026-11-27"
   },
@@ -158,8 +132,21 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "The Town of Norwood's regular senior meals program will not be held on this date. This notice serves as a reminder for community members who rely on or participate in the senior meals service.",
+    "desc": "",
     "type": "Community"
+  },
+  {
+    "title": "An Outlaw Thanksgiving at Alloy Kitchen",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/an-outlaw-thanksgiving-at-alloy-kitchen/",
+    "date": "2026-11-26",
+    "time": "",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/50177/lodge-winter-2200x1100-3.jpg",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "An Outlaw Thanksgiving at Alloy Kitchen in Mountain Lodge Telluride, Mountain Village. A fire-lit Thanksgiving buffet with live music on Thursday,",
+    "type": "Music"
   },
   {
     "title": "Live Music at Mountain Lodge",
@@ -171,7 +158,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/50249/alloy-live-music-1800x900.jpg",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Live music returns to the Après Lounge at Mountain Lodge Telluride in Mountain Village, with local acts performing most Thursdays from 4 to 7 p.m. throughout the winter season. It's a relaxed après-ski setting for enjoying live…",
+    "desc": "Live music all winter at Mountain Lodge Telluride in Mountain Village. Local acts play the Après Lounge from 4 to 7 p.m. most Thursdays,",
     "type": "Music"
   },
   {
@@ -264,7 +251,7 @@
     "img": "https://1v09t9hszk.ucarecd.net/ca6338a4-f816-4b2d-9519-f999c902da9f/-/crop/1877x750/0,2065/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "DJ Phoenix, a 30-year veteran of the Colorado house music scene, takes the decks at The Alibi for a late-night set. Expect an experienced hand behind the turntables bringing energy to one of Telluride's favorite local venues.",
+    "desc": "DJ Phoenix is a 30 year veteran of the Colorado house music scene and no strange...",
     "type": "Music"
   },
   {
@@ -290,7 +277,7 @@
     "img": "https://localist-images.azureedge.net/photos/54329446861527/huge/5ff492866a14a5e49ce0e515c6d714c1010eeea6.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "A weekly group float session held every Saturday at Orvis Hot Springs, combining warm-water aquatic massage with live sound therapy including vocals and singing bowls. The experience is offered on a sliding scale and reservations can be…",
+    "desc": "Group float in warm, healing waters every Saturday @ 3pm. Receive gentle aquatic massage surrounded by live sound therapy; vocals, bowls and more. Contact Vanessa W. 720-470-2823 to reserve your spot. Sliding Scale: $35-$85/person. Please…",
     "type": "Wellness",
     "endDate": "2027-01-23"
   },
@@ -344,8 +331,8 @@
     "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Movies Under the Stars is a recurring outdoor film series hosted at the Conference Center Plaza in Mountain Village, screening on Saturday evenings at dusk. The series runs from June 13 through August 15, bringing community members…",
-    "type": "Arts & Film"
+    "desc": "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    "type": "Community"
   },
   {
     "title": "Tea and Tarot",
@@ -370,7 +357,7 @@
     "img": "https://localist-images.azureedge.net/photos/53950055817938/huge/4924d3606a12c233af2b47a380c304869dfaf267.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Standard Alchemy — featuring Zan Waller on trumpet and Stefan Davenport on guitar — performs swing, cocktail jazz, and Great American Songbook standards at Chloe's Charcuterie & Wine on Sunday afternoons from 4:00 to 7:00 p.m. Occasional…",
+    "desc": "LIVE MUSIC! 🎶 Sundays from 4:00–7:00 p.m., Standard Alchemy (Zan Waller on trumpet, Stefan Davenport on guitar) plays swing, cocktail jazz and Great American Songbook standards, with occasional special guest vocalists. Enjoy live cocktail…",
     "type": "Music",
     "endDate": "2027-01-24"
   },
@@ -397,8 +384,8 @@
     "img": "https://localist-images.azureedge.net/photos/54241462626167/huge/7c0778035e072ff933b617f21809b1459dc84aca.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "A recurring support circle at Bee True You Wellness & Creative Studio for women navigating cancer or chronic illness, offering a safe and welcoming space where participants can share their experiences. The group takes a whole-person…",
-    "type": "Wellness",
+    "desc": "Women Transcending Cancer/Chronic Disease with Grit and Grace A safe, supportive circle for women navigating cancer or chronic disease – where every path is honored and the whole woman is supported: body, mind, and spirit. Come as you are.…",
+    "type": "Community",
     "endDate": "2026-12-07"
   },
   {
@@ -452,7 +439,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586.",
     "type": "Community",
-    "endDate": "2027-01-18"
+    "endDate": "2027-01-25"
   },
   {
     "title": "Monsters & Myths by Challenge Island",
@@ -464,8 +451,8 @@
     "img": "https://localist-images.azureedge.net/photos/54543483397623/huge/4f3401f8c9cf844d59fb883a46f09a6ba3e5011a.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "A Challenge Island program for kids centered on monsters and myths, featuring themed building and engineering activities inspired by legendary creatures and mythological beasts. The event takes place at the Voyager Youth Program's Ridgway…",
-    "type": "Family & Kids",
+    "desc": "Monsters and Myths by Challenge Island® is coming to Voyager! This monstrously marvelous imaginary island is filled with mythological beasts, legendary creatures and things that go bump in the night. Dracula’s Blood Drive Hydra's Head…",
+    "type": "Community",
     "endDate": "2026-12-14"
   },
   {
@@ -478,7 +465,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A guided bicycle tour departing from the Mountain Lodge in Mountain Village, following the Jurassic Trail and Meadows Trail down to Telluride Brewing Co., where riders receive a complimentary beer. The route offers a scenic descent…",
+    "desc": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
     "type": "Outdoors & Sports"
   },
   {
@@ -491,7 +478,7 @@
     "img": "https://localist-images.azureedge.net/photos/54532606385088/huge/459531119ef8c0df8c5ec458451a30206ae6736e.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "A community gathering at the Ridgway Public Library for new and expecting mothers to connect and support one another through the prenatal and postpartum journey. The group meets in person and virtually, focusing on breastfeeding…",
+    "desc": "A supportive skill-building community for new and expecting moms to connect, share, and grow in breastfeeding confidence, physical recovery, and emotional wellbeing throughout the prenatal and postpartum journey. Gathering in person and…",
     "type": "Community",
     "endDate": "2027-01-05"
   },
@@ -519,7 +506,7 @@
     "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Brooke White is performing live at a venue on N Cora Street in Ridgway. The event is listed through the Colorado Boy Depot calendar as a live music performance.",
+    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/",
     "type": "Music"
   },
   {
@@ -598,7 +585,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "This eco-grief workshop, hosted in Mountain Village, brings together Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners, and the Wilkinson Public Library to explore the intersection of grief and gratitude in the…",
+    "desc": "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
     "type": "Talks & Classes"
   },
   {
@@ -747,8 +734,8 @@
     "img": "https://1v09t9hszk.ucarecd.net/ab087872-1df0-4d51-8ebb-db3437d32780/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "A private live music event is taking place at The Alibi in Telluride. The venue is not open to the general public for this occasion; those with questions or interest in attending can reach out directly to the venue for more information.",
-    "type": "Music"
+    "desc": "Please contact hello@alibitelluride.com with all event inquiries!",
+    "type": "Community"
   },
   {
     "title": "Wreaths for Rescues",
@@ -815,7 +802,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "A community meal program for seniors hosted by the Town of Norwood. This midday gathering offers older residents an opportunity to share a meal and connect with neighbors.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -919,7 +906,7 @@
     "img": "https://localist-images.azureedge.net/photos/54139018107075/huge/dc77ec311ce3e3367f9e9d6c47ed459172ad9558.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "The 23rd Annual Holiday Art & Gift Sale returns to the Decker Community Room, offering handmade work from local artisans and craftspeople. This long-running community tradition provides an opportunity to find one-of-a-kind, locally made…",
+    "desc": "Shop local this holiday season at the 23rd Annual Holiday Art & Gift Sale! Browse one-of-a-kind gifts handmade by local artisans and craftspeople and find something special for everyone on your list. Come support local makers, discover…",
     "type": "Arts & Film"
   },
   {
@@ -945,8 +932,8 @@
     "img": "https://localist-images.azureedge.net/photos/52941247100302/huge/24aa8ce412f9817ce04becd51e5d1cc5b8db2cad.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "First Friday Art Walk and Noel Night come together for a festive December evening in downtown Ridgway, combining a holiday parade, a visit from Santa, local shopping, and festive treats. The 23rd Annual Holiday Art and Gift Sale at the…",
-    "type": "Festivals"
+    "desc": "In December, First Friday Art Walk joins forces with Ridgway Area Chamber of Commerce for the beloved Noel Night celebration. Holiday parade & Santa23rd Annual Holiday Art & Gift Sale at the Decker Weehawken Youth Art ShowLife DJ at…",
+    "type": "Family & Kids"
   },
   {
     "title": "Noel Night at Ridgway Pilates",
@@ -958,7 +945,7 @@
     "img": "https://localist-images.azureedge.net/photos/54587477099681/huge/e79ac85370dd36311d7fc0bf98e93b6f15b1287f.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Ridgway Pilates hosts a festive holiday evening featuring live DJ sets, pop-up vendors including Scarlet Lily Botanicals, Good Batch, and Poise Society Active Wear, free ice cream samples from Brown Chicken Brown Cow, discounts on Pilates…",
+    "desc": "Celebrate the season with us - live DJs, pop ups, ice cream, discounts and more. LIVE BEATS DJPERIPHERAL DJM2 DISCOUNTS Save 15% on Pilates Lessons Epic Raffle at 8 PM POP UPS BY Scarlet Lily Botanicals Good Batch Poise Society Active Wear…",
     "type": "Wellness"
   },
   {
@@ -1063,7 +1050,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "Noel Night is a community holiday event hosted by the Town of Norwood, bringing residents together to celebrate the season. Held in early December, it offers a festive evening for families and neighbors in the Norwood area.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -1219,8 +1206,8 @@
     "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Movies Under the Stars is a recurring outdoor film series hosted at the Conference Center Plaza in Mountain Village, screening on Saturday evenings at dusk. The series runs weekly throughout the summer months, offering a seasonal community…",
-    "type": "Arts & Film"
+    "desc": "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    "type": "Community"
   },
   {
     "title": "Mind Blown Telluride",
@@ -1284,7 +1271,7 @@
     "img": "https://localist-images.azureedge.net/photos/53056380145290/huge/4bc303dba2f5121125f911d9a1be0c80caa07512.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "The Ridgway Film Club hosts a free film screening at the Decker Community Room, followed by a group discussion. The specific film is announced to registered participants via email the week before the event; visit…",
+    "desc": "Free film screening with discussion afterwards. For movie details, sign up here (movie names released via email the week prior) www.ridgwayfilmclub.wordpress.com Sponsored by Ridgway Public Library",
     "type": "Arts & Film",
     "endDate": "2027-01-10"
   },
@@ -1311,7 +1298,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/42542/copy_of_2024_community_dinner_-_blog_header_2.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A community dinner hosted by Mountain Village, now in its fourth year, bringing together residents and workers of the Mountain Village area for an evening of food and neighborly connection.",
+    "desc": "Do you live or work in Mountain Village? Then this evening is for you! Join your neighbors, coworkers, and friends for our 4th annual Community Dinner,",
     "type": "Food & Drink"
   },
   {
@@ -1324,7 +1311,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A guided bicycle tour originating at the Mountain Lodge in Mountain Village, following the Jurassic Trail and Meadows Trail down to Telluride Brewing Co., where riders receive a complimentary beer. The route offers a scenic descent through…",
+    "desc": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
     "type": "Outdoors & Sports"
   },
   {
@@ -1337,7 +1324,7 @@
     "img": "https://localist-images.azureedge.net/photos/52236172073282/huge/134613035140f6c008febe657f2e7e23acc365e9.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "A monthly veterans' gathering hosted by the Welcome Home Alliance at The Sherbino, offering coffee, donuts, and camaraderie for veterans of every branch, era, and ability. Representatives will be on hand to share information on topics…",
+    "desc": "",
     "type": "Community",
     "endDate": "2027-01-12"
   },
@@ -1364,7 +1351,7 @@
     "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Britley & Matt are performing live music at a venue on North Cora Street in Ridgway. The event is listed through the Ouray Ridgway community calendar.",
+    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/",
     "type": "Music"
   },
   {
@@ -1390,8 +1377,8 @@
     "img": "https://1v09t9hszk.ucarecd.net/fc1ad9d1-f11b-4aca-9636-5b95b6e3c307/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "A private live music event is taking place at The Alibi in Telluride. The venue is not open to the general public for this occasion; those with questions or inquiries can reach out directly to the venue for more information.",
-    "type": "Music"
+    "desc": "Please contact hello@alibitelluride.com with all event inquiries!",
+    "type": "Community"
   },
   {
     "title": "Weekly Young Adult Gathering",
@@ -1442,7 +1429,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/27556/merchant_event-1.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A monthly gathering for Mountain Village merchants, held on the second Tuesday of each month from 10 to 11 a.m. The meeting is offered in a hybrid format, allowing participants to attend either in person or remotely.",
+    "desc": "Join us for the monthly Mountain Village Merchant Meeting to be held on the second Tuesday of each month from 10 to 11 a.m. The meeting will be hybrid with",
     "type": "Community"
   },
   {
@@ -1455,7 +1442,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "This workshop, hosted in Mountain Village, brings together facilitators from Through the Woods Doula, EcoAction Partners, and the Wilkinson Public Library to explore the emotional terrain of living through environmental change. It offers a…",
+    "desc": "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
     "type": "Talks & Classes"
   },
   {
@@ -1589,8 +1576,8 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-4.jpg",
     "category": "Community Event",
     "source": "Ouray County",
-    "desc": "A fundraising benefit for the Alpine Ranger Fund, held at Floating Lotus Brewery in Ridgway. The event supports ranger programs in the region, with Ouray County Commissioners expected to be in attendance.",
-    "type": "Food & Drink"
+    "desc": "Two or more Ouray County Commissioners may attend and participate in this event. https://ouraycountyco.gov/calendar.aspx?EID=3868",
+    "type": "Community"
   },
   {
     "title": "Brews for the Backcountry • ROCC Pint Night with Flannel Feedback",
@@ -1682,7 +1669,7 @@
     "img": "https://koto.org/wp-content/uploads/2026/09/Screenshot-2026-09-18-at-2.05.52-PM.png",
     "category": "Community Event",
     "source": "KOTO Community Calendar",
-    "desc": "Telluride Mountain School is hosting an open house where prospective families and community members can step directly into the learning environment rather than sit through a formal presentation. Visitors are welcome to explore classrooms,…",
+    "desc": "School In Action Open House! Come experience what learning looks like at Telluride Mountain School. Instead of a presentation about our school, step into the learning. Visit classrooms, meet teachers and students, explore our campus, and…",
     "type": "Talks & Classes"
   },
   {
@@ -1695,7 +1682,7 @@
     "img": "https://1v09t9hszk.ucarecd.net/65646ce1-2053-4871-8053-86f98a94c026/-/crop/2000x1001/0,99/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "The Regular is a folk rock band based in Denver, Colorado, performing live at The Alibi. The band brings their folk rock sound to Telluride for a late-night show.",
+    "desc": "The Regular is a folk rock band based in Denver, CO. Originally formed in Chicag...",
     "type": "Music"
   },
   {
@@ -1747,7 +1734,7 @@
     "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "The Ridgway Wrecking Crew is a live music event taking place at a venue on North Cora Street in Ridgway. It is listed on the Ouray Ridgway community calendar as a local music gathering in the area.",
+    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/",
     "type": "Music"
   },
   {
@@ -1801,8 +1788,8 @@
     "img": "https://1v09t9hszk.ucarecd.net/5a0e2028-07e8-4974-b039-d62e8ab44ab4/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Easy Jim takes the stage at The Alibi for the first night of a residency engagement, bringing live music to this Telluride bar venue. The residency format promises multiple nights of performances in an intimate setting.",
-    "type": "Music"
+    "desc": "“Settle back, easy Jim…” The iconic lyric from Robert Hunter’s Althea captured t...",
+    "type": "Community"
   },
   {
     "title": "Ski Film: Warren Miller's Day Off",
@@ -1814,7 +1801,7 @@
     "img": "https://koto.org/wp-content/uploads/2026/11/Warren-Miller-Web.jpg",
     "category": "Community Event",
     "source": "KOTO Community Calendar",
-    "desc": "Warren Miller's *Days Off*, the legendary ski film franchise's 77th installment, comes to the Sheridan Opera House in Telluride. The film follows host Katie Burrell and the world's top snow sports athletes across global destinations,…",
+    "desc": "Warren Miller's \"Days Off\" This fall, drop in on Warren Miller’s 77th film, Days Off. Follow host Katie Burrell as the world’s best athletes show you what they do on their days off—no agenda, no competition, just pure, unscripted…",
     "type": "Arts & Film"
   },
   {
@@ -1934,8 +1921,8 @@
     "img": "https://1v09t9hszk.ucarecd.net/5a0e2028-07e8-4974-b039-d62e8ab44ab4/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Easy Jim continues their residency at The Alibi with a late-night performance on the second of what appears to be a multi-night run at the beloved Telluride bar. The residency format promises an intimate, unhurried evening of live music in…",
-    "type": "Music"
+    "desc": "“Settle back, easy Jim…” The iconic lyric from Robert Hunter’s Althea captured t...",
+    "type": "Community"
   },
   {
     "title": "Movies Under the Stars",
@@ -1947,8 +1934,8 @@
     "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Movies Under the Stars is an outdoor film series hosted at the Conference Center Plaza in Mountain Village, screening movies on Saturday evenings at dusk. The series runs weekly from June 13 through August 15, 2026.",
-    "type": "Arts & Film"
+    "desc": "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    "type": "Community"
   },
   {
     "title": "Mind Blown Telluride",
@@ -2012,7 +1999,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A guided bicycle ride departing from the Mountain Lodge in Mountain Village, following the Jurassic Trail and Meadows Trail down to Telluride Brewing Co., where riders receive a complimentary beer. The route takes participants through…",
+    "desc": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
     "type": "Outdoors & Sports"
   },
   {
@@ -2025,7 +2012,7 @@
     "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Britley & Matt are performing live music at a venue on North Cora Street in Ridgway. This community event is listed through the Ouray Ridgway Calendar and takes place in mid-December.",
+    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/",
     "type": "Music"
   },
   {
@@ -2091,7 +2078,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "This eco-grief workshop, hosted in Mountain Village, brings together Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners, and the Wilkinson Public Library to explore the emotional experience of living through…",
+    "desc": "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
     "type": "Talks & Classes"
   },
   {
@@ -2144,7 +2131,7 @@
     "img": "https://1v09t9hszk.ucarecd.net/abac4fc9-1234-481d-af73-ae5227ee3cfb/-/crop/660x330/0,96/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Wild Love Tigress is a funk band performing live at The Alibi, bringing an expansive sound that includes horns and backing singers. The show starts at 9:00 PM.",
+    "desc": "An explosive funk band complete with horns, backing singers and the full spectru...",
     "type": "Music"
   },
   {
@@ -2183,8 +2170,21 @@
     "img": "https://localist-images.azureedge.net/photos/54471009862513/huge/f3b17047226a66cb00188aee2e68e967d398ed1c.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "The Ridgway High School Boys Basketball team hosts Caprock Academy at the Ridgway Secondary School gym. Admission supports the athletic program, and concessions will be available.",
+    "desc": "Join us at the Ridgway Secondary Gym as the Ridgway High School Boys Basketball team takes on Caprock Academy! Bring your friends and family, check out our concessions, and cheer on our athletes! Admission supports our athletic program and…",
     "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Live Music in the Après Lounge at Mountain Lodge Telluride",
+    "href": "https://koto.org/event/live-music-in-the-apres-lounge-at-mountain-lodge-telluride/2026-12-18/",
+    "date": "2026-12-18",
+    "time": "4:00 PM",
+    "location": "Mountain Lodge Telluride, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/livemusic.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Local live music in the Après Lounge at Mountain Lodge Telluride in Mountain Village, 4 to 7 PM on most Thursdays, Fridays and Saturdays all winter.",
+    "type": "Music"
   },
   {
     "title": "Ridgway Wrecking Crew",
@@ -2196,7 +2196,7 @@
     "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "The Ridgway Wrecking Crew takes the stage for a live music event at a venue on North Cora Street in Ridgway. The show is listed on the Ouray Ridgway community calendar as an evening performance.",
+    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/",
     "type": "Music"
   },
   {
@@ -2261,8 +2261,8 @@
     "img": "https://1v09t9hszk.ucarecd.net/5caa6e55-bef5-4af0-b673-ba480ad8ced1/-/crop/2048x820/0,163/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Joint Point is an original jam band from Colorado known for blending adventurous rock with improvisational, genre-spanning musicianship. The group performs at The Alibi in Telluride, bringing their signature live sound to an intimate…",
-    "type": "Arts & Film"
+    "desc": "Joint Point is an original jam band from Colorado. They blend adventurous rock, ...",
+    "type": "Music"
   },
   {
     "title": "Craig Childs' Dark Night 2026: ON FIRE, A Night of Storytelling, Visual Media and Poetry, with Musician Emily Scott Robinson",
@@ -2287,8 +2287,8 @@
     "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Movies Under the Stars is an outdoor film series hosted at the Conference Center Plaza in Mountain Village, screening movies on Saturday evenings at dusk. The series runs weekly on Saturdays from June 13 through August 15.",
-    "type": "Arts & Film"
+    "desc": "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    "type": "Community"
   },
   {
     "title": "Mind Blown Telluride",
@@ -2313,7 +2313,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/50161/mind-blown-listing-2200x1100.jpg",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A close-up magic show featuring magician Ty Gallenbeck, held at Mountain Lodge Telluride in Mountain Village. The show runs most Friday and Saturday nights as an ongoing series.",
+    "desc": "Mind Blown Telluride: magician Ty Gallenbeck's close-up magic show at Mountain Lodge Telluride in Mountain Village. Shows run most Friday and Saturday nights",
     "type": "Community"
   },
   {
@@ -2326,7 +2326,7 @@
     "img": "https://localist-images.azureedge.net/photos/52196842516113/huge/34c03f502c2e6b24c2bdceae7a155d7b6d463e8f.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Winter break for Ridgway Schools begins on this date, giving students and families time off during the holiday season. The break is a scheduled pause in the academic calendar for the Ridgway school district.",
+    "desc": "",
     "type": "Community",
     "endDate": "2027-01-01"
   },
@@ -2340,7 +2340,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A guided bicycle ride originating at the Mountain Lodge in Mountain Village, following the Jurassic and Meadows trails down to Telluride Brewing Co., where participants receive a complimentary beer. The tour offers a scenic two-brewery…",
+    "desc": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
     "type": "Outdoors & Sports"
   },
   {
@@ -2353,7 +2353,7 @@
     "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Brooke White performs live at a venue on N Cora Street in Ridgway, with the event listed through the Ouray Ridgway community calendar. It is a live music performance hosted at the Colorado Boy location in Ridgway.",
+    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/",
     "type": "Music"
   },
   {
@@ -2392,7 +2392,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/47492/social_image.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A one-day holiday makers' market held inside the Telluride Conference Center in Mountain Village, offering locally made and one-of-a-kind goods in a festive seasonal setting. The event brings together the community to celebrate the holiday…",
+    "desc": "Celebrate the season at The Very Merry Market — a cozy, one-day holiday makers’ market inside the Telluride Conference Center. Discover one-of-a-kind,",
     "type": "Community"
   },
   {
@@ -2405,7 +2405,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "This community workshop in Mountain Village brings together facilitators from Through the Woods Doula, EcoAction Partners, and the Wilkinson Public Library to explore the emotional landscape of living through environmental change. The…",
+    "desc": "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
     "type": "Talks & Classes"
   },
   {
@@ -2470,7 +2470,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/50175/lodge-winter-2200x1100-4.jpg",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Alloy Kitchen at Mountain Lodge Telluride in Mountain Village is hosting a Christmas Day buffet on Friday, December 25, from 3 to 7 PM. The event is priced at $85 for adults.",
+    "desc": "Christmas Day buffet at Alloy Kitchen in Mountain Lodge Telluride, Mountain Village, on Friday, December 25, from 3 to 7 PM. $85 for adults,",
     "type": "Community"
   },
   {
@@ -2510,8 +2510,8 @@
     "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Movies Under the Stars is a recurring outdoor film series held at the Conference Center Plaza in Mountain Village, screening on Saturday evenings at dusk. The series runs weekly from June 13 through August 15, bringing community members…",
-    "type": "Arts & Film"
+    "desc": "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    "type": "Community"
   },
   {
     "title": "Mind Blown Telluride",
@@ -2692,7 +2692,7 @@
     "img": "https://1v09t9hszk.ucarecd.net/c5b3912c-a04e-4a42-b283-66695bb266a4/-/crop/2922x1168/0,1910/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Mascolo, a French-American vocalist, multi-instrumentalist, and producer, takes the decks at The Alibi for a New Year's Eve DJ set. The night offers a live music sendoff to 2026 at one of Telluride's beloved local venues.",
+    "desc": "Mascolo is a French-American vocalist, multi-instrumentalist, and producer. His ...",
     "type": "Music"
   },
   {
@@ -2851,7 +2851,7 @@
     "img": "https://localist-images.azureedge.net/photos/54471036324426/huge/fc6cf810c04892eebfbf5221c1cc88f3a93b0d8b.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "The Ridgway High School boys basketball team hosts Telluride at Ridgway Secondary School in a league matchup. Admission fees support the athletic program, with concessions available at the gym.",
+    "desc": "Join us at the Ridgway Secondary Gym as the Ridgway High School Boys Basketball team takes on Telluride! Bring your friends and family, check out our concessions, and cheer on our athletes! Admission supports our athletic program and a…",
     "type": "Outdoors & Sports"
   },
   {
@@ -2877,8 +2877,8 @@
     "img": "https://1v09t9hszk.ucarecd.net/5a0e2028-07e8-4974-b039-d62e8ab44ab4/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Easy Jim takes the stage at The Alibi for the first night of a residency engagement, bringing live music to the bar in downtown Telluride. The residency format promises multiple nights of performances from the act in the weeks ahead.",
-    "type": "Music"
+    "desc": "“Settle back, easy Jim…” The iconic lyric from Robert Hunter’s Althea captured t...",
+    "type": "Community"
   },
   {
     "title": "Easy Jim Residency Night 2",
@@ -2890,8 +2890,8 @@
     "img": "https://1v09t9hszk.ucarecd.net/5a0e2028-07e8-4974-b039-d62e8ab44ab4/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Easy Jim continues their residency at The Alibi with a second night of live music. The late-night show is part of an ongoing series at the beloved Telluride bar.",
-    "type": "Music"
+    "desc": "“Settle back, easy Jim…” The iconic lyric from Robert Hunter’s Althea captured t...",
+    "type": "Community"
   },
   {
     "title": "The Lone Bellow",
@@ -2995,7 +2995,7 @@
     "img": "https://localist-images.azureedge.net/photos/54471108905325/huge/4f27e206b0b18ddc50a86d8c8a3897b524416c95.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "The Ridgway High School Boys Basketball team hosts Dolores at Ridgway Secondary School. Admission supports the athletic program, with concessions available at the gym.",
+    "desc": "Join us at the Ridgway Secondary Gym as the Ridgway High School Boys Basketball team takes on Dolores! Bring your friends and family, check out our concessions, and cheer on our athletes! Admission supports our athletic program and a great…",
     "type": "Outdoors & Sports"
   },
   {
@@ -3047,7 +3047,20 @@
     "img": "https://1v09t9hszk.ucarecd.net/c259bebf-9fe4-48c3-b51c-8402400f2fea/-/crop/3550x1774/83,0/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Atlas Radio is a funk-forward jam band led by guitarist Blake Beitzel, performing live at The Alibi in Telluride. The group brings an energetic, groove-driven sound rooted in funk and jam band traditions.",
+    "desc": "Led by guitarist Blake Beitzel, Atlas Radio is a funk-forward jam band based in ...",
     "type": "Music"
+  },
+  {
+    "title": "Dogs in a Pile",
+    "href": "https://www.telluride.com/event/dogs-in-a-pile/",
+    "date": "2027-01-26",
+    "time": "5:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/63805/screenshot_2026-10-13_at_4_07_42_pm.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Something organic has been blooming from Asbury Park, New Jersey, and is now making its way around the world. Dogs In A …",
+    "type": "Community"
   }
 ]
