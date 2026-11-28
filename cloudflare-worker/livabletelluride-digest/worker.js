@@ -420,6 +420,25 @@ async function sha256Hex(str) {
   return Array.from(new Uint8Array(buf)).map((b) => b.toString(16).padStart(2, "0")).join("");
 }
 
+// HMAC-SHA256 hex, keyed by DIGEST_KEY — the signature on a one-click /approve
+// link. scripts/send-digest-mockup.js mints the same with the local key copy.
+async function hmacHex(secret, msg) {
+  const key = await crypto.subtle.importKey("raw", new TextEncoder().encode(secret), { name: "HMAC", hash: "SHA-256" }, false, ["sign"]);
+  const sig = await crypto.subtle.sign("HMAC", key, new TextEncoder().encode(msg));
+  return Array.from(new Uint8Array(sig)).map((b) => b.toString(16).padStart(2, "0")).join("");
+}
+
+// Small branded HTML page shown after clicking an /approve link.
+function approvePage(msg, ok) {
+  const html = '<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Digest approval</title></head>'
+    + '<body style="margin:0;background:#f0ece3;font-family:-apple-system,BlinkMacSystemFont,\'Segoe UI\',Roboto,Helvetica,Arial,sans-serif;color:#2c3b35;">'
+    + '<div style="max-width:520px;margin:9vh auto;background:#fdfbf6;border-radius:10px;padding:34px 30px;text-align:center;box-shadow:0 2px 14px rgba(0,0,0,.08);">'
+    + '<div style="font-family:Georgia,serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#b58a2c;">Livable Telluride &middot; Digest</div>'
+    + '<div style="font-size:46px;margin:12px 0 6px;">' + (ok ? "&#9989;" : "&#9888;&#65039;") + '</div>'
+    + '<p style="font-size:17px;line-height:1.5;margin:6px 0 0;">' + msg + '</p></div></body></html>';
+  return new Response(html, { status: ok ? 200 : 400, headers: { "content-type": "text/html; charset=utf-8" } });
+}
+
 // UTF-8-safe base64 (GitHub Contents API wants base64 file content).
 function b64(str) {
   const bytes = new TextEncoder().encode(str);
@@ -778,6 +797,37 @@ export default {
       try { return json({ ok: true, dry: true, ...(await scheduledSend(env, true)) }, 200, origin); }
       catch (e) { return json({ ok: false, dry: true, error: String((e && e.message) || e) }, 200, origin); }
     }
+    // One-click approval from the emailed mock-up (Morgan 2026-11-28). A GET so
+    // an email button can hit it; authorized not by the desk key but by an HMAC
+    // token minted with DIGEST_KEY (scripts/send-digest-mockup.js), so only a
+    // link we generated is valid. Clicking it writes the send-lock for the
+    // CURRENT digest/<key>.html — the version Morgan reviewed (held steady by the
+    // freeze written when the mock-up was sent) — so the scheduled job sends it.
+    if (url.pathname === "/approve") {
+      const p = url.searchParams;
+      const k = p.get("key") === "past" ? "past" : "weekly";
+      const ws = p.get("ws") || "";
+      const exp = parseInt(p.get("exp") || "0", 10);
+      const sig = (p.get("sig") || "").toLowerCase();
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(ws) || !exp || !sig) return approvePage("This approval link is incomplete.", false);
+      if (Math.floor(Date.now() / 1000) > exp) return approvePage("This approval link has expired — ask Claude for a fresh one.", false);
+      const expect = await hmacHex(env.DIGEST_KEY || "", "approve|" + k + "|" + ws + "|" + exp);
+      if (sig.length !== expect.length || sig !== expect) return approvePage("This approval link isn't valid.", false);
+      try {
+        const man = JSON.parse((await ghGetText(env, "digest/manifest.json")) || "{}");
+        const d = man.digests && man.digests[k];
+        if (!d) return approvePage("There's no " + (k === "past" ? "Past Meetings" : "Week Ahead") + " digest to approve right now.", false);
+        if ((d.weekStart || "") !== ws) return approvePage("This digest has rolled to a new week — ask Claude for a fresh approval link.", false);
+        const html = await ghGetText(env, "digest/" + k + ".html");
+        if (!html) return approvePage("The digest file is missing — ask Claude to re-send.", false);
+        const lock = JSON.stringify({ weekStart: ws, subject: d.subject || "", sha256: await sha256Hex(html), lockedAt: new Date().toISOString(), via: "email-approve" }, null, 2) + "\n";
+        await ghPutFile(env, "digest/" + k + ".lock.json", lock, "Digest: approved via email " + k + " " + ws);
+        return approvePage("Approved — the " + (k === "past" ? "Past Meetings" : "Week Ahead") + " digest is locked and will send at its scheduled time. You can close this tab.", true);
+      } catch (e) {
+        return approvePage("Couldn't record the approval: " + String((e && e.message) || e), false);
+      }
+    }
+
     if (request.method !== "POST") return json({ error: "POST only" }, 405, origin);
 
     const key = request.headers.get("x-digest-key") || "";

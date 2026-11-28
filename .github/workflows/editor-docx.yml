@@ -28,7 +28,7 @@ on:
         required: false
 
 permissions:
-  contents: read
+  contents: write  # commit the frozen editor-draft digest + freeze marker
   actions: write   # save the once-per-week cache marker
 
 concurrency:
@@ -98,6 +98,7 @@ jobs:
           python3 scripts/editor-docx.py /tmp/editor.json "$FILE"
           echo "file=$FILE" >> "$GITHUB_OUTPUT"
           echo "label=$LABEL" >> "$GITHUB_OUTPUT"
+          echo "ws=$WS" >> "$GITHUB_OUTPUT"
 
       - name: Email the Word document
         if: steps.g.outputs.go == 'true'
@@ -122,6 +123,30 @@ jobs:
             Thanks,
             Livable Telluride
           attachments: ${{ steps.build.outputs.file }}
+
+      # Freeze next week's digest at the exact version John is editing, so the
+      # 6-hourly Content Refresh stops re-rendering it (Morgan 2026-11-28: once
+      # the first bot draft goes to the editor, the bot never updates it again).
+      # digest/week.html here == the editor doc's source; John's edits apply
+      # cleanly to it, and digest-refresh preserves it until the freeze expires
+      # the Tuesday after the Monday send. Nothing SENDS without an approval lock.
+      - name: Freeze the editor-draft digest (bot stops updating it)
+        if: steps.g.outputs.go == 'true' && github.event.inputs.to == ''
+        run: |
+          set -eo pipefail
+          WS="${{ steps.build.outputs.ws }}"
+          cp /tmp/week.html digest/week.html
+          UNTIL="$(date -u -d "$WS +1 day" +%F)T18:00:00Z"
+          printf '{\n  "until": "%s",\n  "reason": "Week Ahead editor draft frozen for review (%s)"\n}\n' "$UNTIL" "$WS" > digest/freeze.json
+          git config user.name "Gov Hub Bot"
+          git config user.email "bot@livabletelluride.org"
+          git add digest/week.html digest/freeze.json
+          if git diff --cached --quiet; then
+            echo "no digest change to freeze"
+          else
+            git commit -m "Digest: freeze Week Ahead editor draft for $WS (bot stops updating until Tue)"
+            for i in 1 2 3; do git pull --rebase origin main && git push && break || { echo "push retry $i"; sleep 8; }; done
+          fi
 
       - name: Mark this week as sent
         if: steps.g.outputs.go == 'true' && github.event.inputs.to == ''
