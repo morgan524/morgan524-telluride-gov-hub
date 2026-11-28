@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed-family.xml" rel="self" type="application/rss+xml" />
     <description>Storytime, youth programs, and all-ages activities — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 27 Nov 2026 20:58:03 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 28 Nov 2026 03:13:30 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Mon, Nov 30] Strings and Keys</title>
@@ -42,7 +42,7 @@ The December 2 CCAASE meeting is largely a calendar and banner housekeeping sess
 
 The December 2 Telluride Housing Authority Subcommittee meeting has one substantive action item: a request from Lela and Jon Martin for an exception to the permitted capital improvement limits under their deed restriction, covering a proposed $160,000 roof replacement at 950 E. Colorado Avenue, Gold Run, Unit 3B. That figure is 57% of their original purchase price of $279,200 — well beyond the 30% absolute cap written into their older deed restriction. Staff recommends approval, conditioned on the Martins executing a new deed restriction under the current Guidelines, which replaced the hard cap with a more flexible exception process. If approved, the unit's maximum sale price would climb significantly, raising affordability-tier questions the subcommittee will need to weigh. The board also takes up minutes from the October 7 and November 18 meetings.
 
-⚡ Why it matters: Board decides if deed-restricted owner can exceed capital improvement limits.]]></description>
+⚡ Why it matters: Housing Authority decides whether to allow $160,000 deed-restricted capital improvement exception.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -55,7 +55,7 @@ The December 2 Telluride Housing Authority Subcommittee meeting has one substant
 
 The Ecology Commission takes up a proposed ordinance that would phase out combustion-powered lawn and garden equipment townwide — first for leaf blowers by January 1, 2028, then for all other covered equipment (mowers, trimmers, edgers, and the like) by January 1, 2030. The draft ordinance would also immediately bar the Town from purchasing any new gas-powered lawn equipment. Snow removal gear, chainsaws, portable generators, and wildfire/defensible-space work are carved out. Enforcement would run complaint-based, with a written warning on a first offense; commercial operators can be cited both individually and as a business entity. Colorado's HB23-1161 point-of-sale discount and San Miguel Power Association rebates together could offset roughly half the cost of replacement equipment. This is a work session — no vote is on the table yet — with the path forward likely running through a Town Council agenda item after today's discussion.
 
-⚡ Why it matters: Proposed ordinance would ban gas lawn equipment townwide by 2030.]]></description>
+⚡ Why it matters: Proposed ordinance would ban gas lawn equipment townwide starting 2028.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -83,13 +83,15 @@ The December 3 Mountain Village Design Review Board agenda contains only a singl
       <category>Mountain Village</category>
     </item>
     <item>
-      <title>[Meeting] TMVOA Board of Directors Budget Meeting #3 — 2026-12-03</title>
+      <title>⚡ [Meeting] TMVOA Board of Directors Budget Meeting #3 — 2026-12-03</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/tmvoa%7C2026-12-03%7CTMVOA%20Board%20of%20Directors%20Budget%20Meeting%20%233</guid>
       <pubDate>Thu, 03 Dec 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[tmvoa • 2026-12-03
 
-The December 3 TMVOA Board of Directors Budget Meeting #3 agenda hasn't been posted yet.]]></description>
+The Telluride Mountain Village Owners Association holds its third budget board meeting to adopt the 2027 budget by resolution — the main event. Also on the action list: approval of a SMART IGA, which connects this session directly to the ongoing gondola funding structure. The board will review the proposed 2027 meeting calendar before opening the floor to public comment. Any decisions made here head to the full Members Meeting on December 17.
+
+⚡ Why it matters: TMVOA votes to adopt 2027 budget and approve gondola-linked SMART IGA.]]></description>
       <category>Meeting</category>
       <category>tmvoa</category>
     </item>
@@ -135,9 +137,35 @@ The December 3 Special Meeting — rescheduled from the cancelled November 5 mee
 
 A special BOCC session with two distinct parts. First, budget adjustments for 2027: the board will work through potential amendments including clarifying the wildfire mitigation budget, a $50,000 seed-money request from the Chamber of Commerce, and an additional cost contribution tied to a Youth Hangout project. The consent agenda covers routine items — a planning commission reappointment, surplus declaration for three aging Road and Bridge trucks, the annual HUTF mileage sheet, an amended deed restriction in Two Rivers Subdivision, and a Proposition 123 MOU with the City of Montrose. Then, starting around 11:05, the commissioners move into closed executive sessions for personnel reviews of the County Manager and County Attorney, both of whom requested the closed meetings.
 
-⚡ Why it matters: County votes on 2027 budget adjustments including wildfire mitigation funds.]]></description>
+⚡ Why it matters: BOCC decides 2027 budget amendments including wildfire mitigation and Chamber funding.]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
+    </item>
+    <item>
+      <title>⚡ [Meeting] Special Town Council - Dec 04 2026 — 2026-12-04</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-12-04%7CSpecial%20Town%20Council%20-%20Dec%2004%202026</guid>
+      <pubDate>Fri, 04 Dec 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Town of Telluride • 2026-12-04
+
+This special meeting is a single-item public hearing: Town Council sits as an appellate body to review a challenge to HARC's September 16, 2026 approval of a new construction project at 208 S Fir Street. The appellant, an adjacent property owner at 150 W Pacific Avenue, filed the appeal on September 30, 2026. At issue is a three-story, 34.88-foot addition behind a reconstructed historic Supporting structure — bringing the project to 5,033 sq ft on a 3,525 sq ft lot in the Commercial zone, within the Telluride Historic Landmark District. The core argument: HARC approved the building without ever formally determining which design guidelines govern it — whether the replica qualifies as a rated Supporting structure reconstruction (triggering subordination and height standards) or as new construction on a vacant lot. HARC also amended a sequencing condition from its 2021 demolition approval, and the appellant contends that amendment was made without the findings the Land Use Code requires. Council will hear both appeals.
+
+⚡ Why it matters: Council reviews contested HARC approval; outcome sets construction review precedent.]]></description>
+      <category>Meeting</category>
+      <category>Town of Telluride</category>
+    </item>
+    <item>
+      <title>[Fri, Dec 4] Up-Off Gymnastics, Dance, and Spanish</title>
+      <link>https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-12-04/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/up%20off%20gymnastics%20dance%7C2026-12-04</guid>
+      <pubDate>Fri, 04 Dec 2026 17:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+📍 Lone Cone Library Norwood
+
+We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
     </item>
   </channel>
 </rss>

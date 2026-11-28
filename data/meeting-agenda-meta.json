@@ -1,12 +1,4 @@
 {
-  "county|2026-10-28|Board of County Commissioners Work Session": {
-    "sv": 4,
-    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1036/files/agenda/2056",
-    "zoomUrl": "https://us02web.zoom.us/meeting/register/oIcj4FR6RoCy142-aHzo5w",
-    "meetingId": "868 9105 7971",
-    "passcode": "451656",
-    "phone": "719-359-4580"
-  },
   "telluride|2026-11-04|Ecology Commission - Nov 04 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8120",
     "sv": 4,
@@ -222,14 +214,6 @@
     "passcode": "281002.",
     "phone": "346-248-7799"
   },
-  "ouray|2026-10-28|Board of County Commissioners Work Session": {
-    "agendaUrl": "https://ouraycoco.portal.civicclerk.com/event/1129/files/agenda/7573",
-    "zoomUrl": "https://us06web.zoom.us/j/87606375697?pwd=F4epE8XNbLwY5HjLUYeETbwoQsL0ps.1",
-    "meetingId": "876 0637 5697",
-    "passcode": "946299",
-    "phone": "346-248-7799",
-    "sv": 4
-  },
   "school|2026-11-04|Telluride Board of Education Work Session": {
     "sv": 4,
     "agendaUrl": "https://files.smartsites.parentsquare.com/3403/1142026_ws_packet.pdf"
@@ -334,7 +318,11 @@
   },
   "tmvoa|2026-12-03|TMVOA Board of Directors Budget Meeting #3": {
     "sv": 4,
-    "ph": "b858cb282617fb09"
+    "agendaUrl": "https://tmvoa.org/site/assets/files/4892/tmvoa_board_meeting_agenda_12_03_26.pdf",
+    "zoomUrl": "https://us02web.zoom.us/meeting/register/-L-2BpELR8y7S8eOF2JeqQ",
+    "meetingId": "886 0312 7620",
+    "passcode": "659571",
+    "phone": "970) 728-1904"
   },
   "telluride|2026-12-03|Town Council Retreat - Dec 03 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8051",

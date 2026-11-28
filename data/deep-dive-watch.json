@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-27T20:57:55.732Z",
+ "generated": "2026-11-28T03:13:21.071Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -123,7 +123,20 @@
   "gondola": {
    "label": "Gondola 3A",
    "lastUpdated": "2026-07-20",
-   "upcoming": [],
+   "upcoming": [
+    {
+     "source": "tmvoa",
+     "sourceLabel": "TMVOA",
+     "title": "TMVOA Board of Directors Budget Meeting #3",
+     "date": "2026-12-03",
+     "time": "",
+     "location": "Mountain Village, CO (see agenda for Zoom link)",
+     "agendaUrl": "https://tmvoa.org/site/assets/files/4892/tmvoa_board_meeting_agenda_12_03_26.pdf",
+     "link": "https://tmvoa.org/site/assets/files/4892/tmvoa_board_meeting_agenda_12_03_26.pdf",
+     "zoomLink": "https://us02web.zoom.us/meeting/register/-L-2BpELR8y7S8eOF2JeqQ",
+     "livestream": ""
+    }
+   ],
    "recent": [
     {
      "source": "smart",
