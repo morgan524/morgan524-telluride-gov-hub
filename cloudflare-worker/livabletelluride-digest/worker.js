@@ -818,7 +818,7 @@ export default {
         const d = man.digests && man.digests[k];
         if (!d) return approvePage("There's no " + (k === "past" ? "Past Meetings" : "Week Ahead") + " digest to approve right now.", false);
         if ((d.weekStart || "") !== ws) return approvePage("This digest has rolled to a new week — ask Claude for a fresh approval link.", false);
-        const html = await ghGetText(env, "digest/" + k + ".html");
+        const html = await ghGetText(env, d.file || ("digest/" + k + ".html"));
         if (!html) return approvePage("The digest file is missing — ask Claude to re-send.", false);
         const lock = JSON.stringify({ weekStart: ws, subject: d.subject || "", sha256: await sha256Hex(html), lockedAt: new Date().toISOString(), via: "email-approve" }, null, 2) + "\n";
         await ghPutFile(env, "digest/" + k + ".lock.json", lock, "Digest: approved via email " + k + " " + ws);
