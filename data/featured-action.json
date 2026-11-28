@@ -1,27 +1,27 @@
 {
- "generated": "2026-11-28T02:32:23.655Z",
+ "generated": "2026-11-28T08:34:28.387Z",
  "pinned": false,
- "topic": "code",
- "topicLabel": "Code Changes & Accelerated Review",
- "headline": "Code Changes & Accelerated Review goes before Board of County Commissioner meeting -Special on Thursday, December 3",
- "blurb": "A special BOCC session with two distinct parts. First, budget adjustments for 2027: the board will work through potential amendments including clarifying the wildfire mitigation budget, a $50,000 seed-money request from the Chamber of Commerce, and an additional cost contribution tied to a Youth Hangout project.",
+ "topic": "gondola",
+ "topicLabel": "Gondola 3A",
+ "headline": "Gondola 3A goes before TMVOA Board of Directors Budget Meeting #3 on Thursday, December 3",
+ "blurb": "The Telluride Mountain Village Owners Association holds its third budget board meeting to adopt the 2027 budget by resolution — the main event. Also on the action list: approval of a SMART IGA, which connects this session directly to the ongoing gondola funding structure. The board will review the proposed 2027 meeting calendar before opening the floor to public comment. Any decisions made here head to the full Members Meeting on December 17.",
  "images": [],
  "deepDive": {
-  "label": "Code Changes & Accelerated Review",
-  "href": "/deep-dive-code.html"
+  "label": "Gondola 3A",
+  "href": "/deep-dive-gondola.html"
  },
  "meeting": {
-  "title": "Board of County Commissioner meeting -Special",
-  "sourceLabel": "San Miguel County",
+  "title": "TMVOA Board of Directors Budget Meeting #3",
+  "sourceLabel": "TMVOA",
   "date": "2026-12-03",
   "humanDate": "Thursday, December 3",
-  "time": "10:00 AM",
-  "location": "333 West Colorado Ave, 2nd Fl, Telluride, CO 81435",
-  "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1120/files",
+  "time": "",
+  "location": "Mountain Village, CO (see agenda for Zoom link)",
+  "agendaUrl": "https://tmvoa.org/site/assets/files/4892/tmvoa_board_meeting_agenda_12_03_26.pdf",
   "hasAgenda": true,
-  "packetUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1120/files/agenda/2083",
-  "link": "https://sanmiguelcoco.portal.civicclerk.com/event/1120/files",
-  "zoomLink": "https://us02web.zoom.us/meeting/register/ZX_PyCyTS0Oj4fzOTO9w2g",
-  "livestream": "https://www.youtube.com/@sanmiguelcountyco/streams"
+  "packetUrl": "",
+  "link": "https://tmvoa.org/site/assets/files/4892/tmvoa_board_meeting_agenda_12_03_26.pdf",
+  "zoomLink": "https://us02web.zoom.us/meeting/register/-L-2BpELR8y7S8eOF2JeqQ",
+  "livestream": ""
  }
 }

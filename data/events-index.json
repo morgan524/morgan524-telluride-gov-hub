@@ -11,7 +11,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours…",
     "type": "Community",
-    "endDate": "2027-01-23"
+    "endDate": "2027-01-26"
   },
   {
     "title": "Ski and Board Days",
@@ -25,19 +25,6 @@
     "source": "Beacon",
     "desc": "Once a week, young adults gather over lunch to ski and board together.",
     "type": "Community"
-  },
-  {
-    "title": "Live Music in the Après Lounge at Mountain Lodge Telluride",
-    "href": "https://koto.org/event/live-music-in-the-apres-lounge-at-mountain-lodge-telluride/2026-11-27/",
-    "date": "2026-11-27",
-    "time": "4:00 PM",
-    "location": "Mountain Lodge Telluride, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/livemusic.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Local live music in the Après Lounge at Mountain Lodge Telluride in Mountain Village, 4 to 7 PM on most Thursdays, Fridays and Saturdays all winter.",
-    "type": "Music"
   },
   {
     "title": "Familiar Grounds - Marcie Reed Whiton and Wellington Martins",
@@ -1168,20 +1155,6 @@
     "type": "Music"
   },
   {
-    "title": "Ridgway Film Club - Film Screening and Discussion",
-    "href": "https://events.ourayridgwayevents.com/event/ridgway-film-club-8555",
-    "date": "2026-12-06",
-    "time": "7:00 PM",
-    "location": "Decker Community Room",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53056380145290/huge/4bc303dba2f5121125f911d9a1be0c80caa07512.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "The Ridgway Film Club hosts a free film screening at the Decker Community Room, followed by a group discussion. The specific film is announced to registered participants via email the week before the event; visit…",
-    "type": "Arts & Film",
-    "endDate": "2027-01-10"
-  },
-  {
     "title": "Monthly Karate in Ouray County",
     "href": "https://events.ourayridgwayevents.com/event/monthly-karate-in-ouray-county",
     "date": "2026-12-07",
@@ -1523,20 +1496,6 @@
     "source": "KOTO Community Calendar",
     "desc": "Join the Telluride Mountain Club and PI Avy Fund for our first Backcountry Chat of the season! We will cover several important topics to help backcountry users get dialed before heading into the mountains this season. Colorado Avalanche…",
     "type": "Community"
-  },
-  {
-    "title": "Community Meditation",
-    "href": "https://events.ourayridgwayevents.com/event/community-meditation-1981",
-    "date": "2026-12-10",
-    "time": "6:30 PM",
-    "location": "Decker Community Room",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/54585518387469/huge/ca4f03c43122c6d7ba856179cc7023a37cf32120.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Join us for a peer-led meditation series at the Decker Community Room. Free and open to the public!",
-    "type": "Wellness",
-    "endDate": "2027-01-15"
   },
   {
     "title": "Clothing Swap",
@@ -2312,7 +2271,8 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "The Ouray Tourism Advisory Committee (TAC) represents a cross-section of the small businesses, nonprofits, and residents of Ouray. We educate ourselves about best practices in the tourism industry, tourism marketing, and the visitor…",
-    "type": "Community"
+    "type": "Community",
+    "endDate": "2027-01-27"
   },
   {
     "title": "Weekly Young Adult Gathering",
@@ -3007,6 +2967,19 @@
     "source": "The Alibi",
     "desc": "Atlas Radio is a funk-forward jam band led by guitarist Blake Beitzel, performing live at The Alibi in Telluride. The group brings an energetic, groove-driven sound rooted in funk and jam band traditions.",
     "type": "Music"
+  },
+  {
+    "title": "Ridgway HS Boys Basketball vs. Ouray",
+    "href": "https://events.ourayridgwayevents.com/event/ridgway-hs-boys-basketball-vs-ouray",
+    "date": "2027-01-26",
+    "time": "4:00 PM",
+    "location": "Ridgway Secondary School",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54471130902529/huge/06fe1a28a7ffd2ffcc61ec42b7218a95f350a2dd.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "A high school boys basketball game between Ridgway and Ouray takes place at the Ridgway Secondary School gym. The event is open to the community, with concessions available and admission proceeds supporting the athletic program.",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Dogs in a Pile",

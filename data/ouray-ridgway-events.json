@@ -27,7 +27,7 @@
     "link": "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
     "description": "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
     "pubDate": "2026-11-27T20:30:00.000Z",
-    "endDate": "2027-01-23",
+    "endDate": "2027-01-26",
     "source": "oray",
     "sourceLabel": "Ouray Ridgway Calendar",
     "category": "Community Event",
@@ -482,18 +482,6 @@
     "imageUrl": "https://localist-images.azureedge.net/photos/54227072853717/huge/a0d50fe2ccd6f4a1fbad398eed543b67b571aef1.jpg"
   },
   {
-    "title": "Ridgway Film Club - Film Screening and Discussion",
-    "link": "https://events.ourayridgwayevents.com/event/ridgway-film-club-8555",
-    "description": "The Ridgway Film Club hosts a free film screening at the Decker Community Room, followed by a group discussion. The specific film is announced to registered participants via email the week before the event; visit ridgwayfilmclub.wordpress.com to sign up. Sponsored by Ridgway Public Library.",
-    "pubDate": "2026-12-07T02:00:00.000Z",
-    "endDate": "2027-01-10",
-    "source": "oray",
-    "sourceLabel": "Ouray Ridgway Calendar",
-    "category": "Community Event",
-    "location": "Decker Community Room",
-    "imageUrl": "https://localist-images.azureedge.net/photos/53056380145290/huge/4bc303dba2f5121125f911d9a1be0c80caa07512.jpg"
-  },
-  {
     "title": "Monthly Karate in Ouray County",
     "link": "https://events.ourayridgwayevents.com/event/monthly-karate-in-ouray-county",
     "description": "Join Weehawken Creative Arts for Karate with Sensei Kay Briggs. We offer unlimited monthly classes in Ouray County (meaning you can attend each week in Ouray and/or Ridgway — or both). Tuition/registration is DUE the 1st week of the month. Karate class is a great way to learn skills to keep you safe, stay in shape and strong core movements. Karate believes in using it only to protect self and is taught accordingly. Whether you are new to Karate or a seasoned student, the Sensei will work with your level. Taught in the kyokushin kai-kan style, similar shotokan style of karate, we welcome new students to try this exceptional experience for your mind and body! Mixed ages --- Ages 7 through Adult (extended time for more experience) Mondays in Ouray: St. …",
@@ -596,18 +584,6 @@
     "category": "Community Event",
     "location": "Floating Lotus Brewery",
     "imageUrl": "https://localist-images.azureedge.net/photos/54579464943680/huge/7b95501d5266ff0affe7941d02db2aef49ec04a9.jpg"
-  },
-  {
-    "title": "Community Meditation",
-    "link": "https://events.ourayridgwayevents.com/event/community-meditation-1981",
-    "description": "Join us for a peer-led meditation series at the Decker Community Room. Free and open to the public!",
-    "pubDate": "2026-12-11T01:30:00.000Z",
-    "endDate": "2027-01-15",
-    "source": "oray",
-    "sourceLabel": "Ouray Ridgway Calendar",
-    "category": "Community Event",
-    "location": "Decker Community Room",
-    "imageUrl": "https://localist-images.azureedge.net/photos/54585518387469/huge/ca4f03c43122c6d7ba856179cc7023a37cf32120.jpg"
   },
   {
     "title": "Floating Lotus Music Bingo – November & December 2026",
@@ -749,6 +725,7 @@
     "link": "https://events.ourayridgwayevents.com/event/tourism-advisory-committee",
     "description": "The Ouray Tourism Advisory Committee (TAC) represents a cross-section of the small businesses, nonprofits, and residents of Ouray. We educate ourselves about best practices in the tourism industry, tourism marketing, and the visitor experience. We gather input, plan, prioritize, measure, and advise the City of Ouray on the best actions to take related to the tourism industry in our community.",
     "pubDate": "2026-12-23T00:30:00.000Z",
+    "endDate": "2027-01-27",
     "source": "oray",
     "sourceLabel": "Ouray Ridgway Calendar",
     "category": "Community Event",
@@ -810,5 +787,16 @@
     "category": "Community Event",
     "location": "",
     "imageUrl": "https://localist-images.azureedge.net/photos/54597700780563/huge/047d65730afb0fa2d75059a936390319bfcd6eb1.jpg"
+  },
+  {
+    "title": "Ridgway HS Boys Basketball vs. Ouray",
+    "link": "https://events.ourayridgwayevents.com/event/ridgway-hs-boys-basketball-vs-ouray",
+    "description": "A high school boys basketball game between Ridgway and Ouray takes place at the Ridgway Secondary School gym. The event is open to the community, with concessions available and admission proceeds supporting the athletic program.",
+    "pubDate": "2027-01-26T23:00:00.000Z",
+    "source": "oray",
+    "sourceLabel": "Ouray Ridgway Calendar",
+    "category": "Community Event",
+    "location": "Ridgway Secondary School",
+    "imageUrl": "https://localist-images.azureedge.net/photos/54471130902529/huge/06fe1a28a7ffd2ffcc61ec42b7218a95f350a2dd.jpg"
   }
 ]

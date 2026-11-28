@@ -146,9 +146,6 @@ function resolveEventImage(e, opts) {
 // stays current automatically; the static config is the fallback for
 // sources without a PDF agenda.
 const MEETING_AGENDA_META = {
-  "county|2026-10-28|Board of County Commissioners Work Session":
-    {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1036/files/agenda/2056","zoomUrl":"https://us02web.zoom.us/meeting/register/oIcj4FR6RoCy142-aHzo5w","meetingId":"868 9105 7971","passcode":"451656","phone":"719-359-4580"},
-
   "telluride|2026-11-04|Ecology Commission - Nov 04 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8120","sv":4,"zoomUrl":"https://us06web.zoom.us/j/84372531870?pwd=Dzpb3SzCKOLJejMu5DGalEWqJghGlM.1","phone":"970-728-2496"},
 
@@ -254,9 +251,6 @@ const MEETING_AGENDA_META = {
   "telluride|2026-11-19|Liquor Licensing Authority - Nov 19 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8147","sv":4,"zoomUrl":"https://us06web.zoom.us/j/86169871704?pwd=oK56hZLiXIbBia4HLKYI9XqWcVl8Uz.1","meetingId":"861 6987 1704","passcode":"281002.","phone":"346-248-7799"},
 
-  "ouray|2026-10-28|Board of County Commissioners Work Session":
-    {"agendaUrl":"https://ouraycoco.portal.civicclerk.com/event/1129/files/agenda/7573","zoomUrl":"https://us06web.zoom.us/j/87606375697?pwd=F4epE8XNbLwY5HjLUYeETbwoQsL0ps.1","meetingId":"876 0637 5697","passcode":"946299","phone":"346-248-7799","sv":4},
-
   "school|2026-11-04|Telluride Board of Education Work Session":
     {"sv":4,"agendaUrl":"https://files.smartsites.parentsquare.com/3403/1142026_ws_packet.pdf"},
 
@@ -312,7 +306,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://www.norwoodtown.com/files/8bb3805e6/11.04.2026+BOT+Work+Session+Agenda.pdf","zoomUrl":"https://us02web.zoom.us/j/88369352327","meetingId":"883 6935 2327","passcode":"122688","phone":"970-327-4288","sv":4},
 
   "tmvoa|2026-12-03|TMVOA Board of Directors Budget Meeting #3":
-    {"sv":4,"ph":"b858cb282617fb09"},
+    {"sv":4,"agendaUrl":"https://tmvoa.org/site/assets/files/4892/tmvoa_board_meeting_agenda_12_03_26.pdf","zoomUrl":"https://us02web.zoom.us/meeting/register/-L-2BpELR8y7S8eOF2JeqQ","meetingId":"886 0312 7620","passcode":"659571","phone":"970) 728-1904"},
 
   "telluride|2026-12-03|Town Council Retreat - Dec 03 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8051","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/SvscXljMQ1ukEeEL6Kf0mg","meetingId":"897 7434 7074","passcode":"604217.","phone":"719) 359-4580"},
@@ -819,7 +813,10 @@ const MEETING_PREVIEWS = {
     "The Ecology Commission is expected to discuss a proposal to prohibit combustion-powered lawn care equipment in Telluride, including a possible phase-out ordinance affecting commercial operators. The commission will also review and approve minutes from its November 4 meeting.",
 
   "county|2026-12-03|Board of County Commissioner meeting -Special":
-    "Board will consider agenda items at a special meeting on December 3, 2026 in Telluride. Related public notices include requests for proposals for a Multi-Jurisdictional All-Hazard Mitigation Plan Update and a Housing Action Plan, along with several foreclosure sales and other county matters."
+    "Board will consider agenda items at a special meeting on December 3, 2026 in Telluride. Related public notices include requests for proposals for a Multi-Jurisdictional All-Hazard Mitigation Plan Update and a Housing Action Plan, along with several foreclosure sales and other county matters.",
+
+  "tmvoa|2026-12-03|TMVOA Board of Directors Budget Meeting #3":
+    "Board will consider adopting the 2027 budget and approving a SMART Intergovernmental Agreement. Members will also review the 2027 proposed meeting calendar, hear public comment, and approve minutes from the November 19 meeting."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1007,13 +1004,10 @@ const ENGAGE_MEETINGS = [
     dateUrl: "https://engagetelluride.org/facilities-master-plan/widgets/99345/key_dates#43153"
   }
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-11-27';
-const LEGAL_NOTICES_CACHE_DATE = '2026-11-27';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-11-28';
+const LEGAL_NOTICES_CACHE_DATE = '2026-11-28';
 
 const MANUAL_SUMMARIES = {
-  "county|2026-10-28|Board of County Commissioners Work Session":
-    "The October 28 BOCC Work Session in Placerville has been posted, but no agenda detail beyond the meeting name and location has been provided. There's no way to know what's on the table until the full agenda drops.",
-
   "telluride|2026-11-04|Ecology Commission - Nov 04 2026":
     "The Ecology Commission meets to finalize its 2027 workplan and, more consequentially, to discuss a draft ordinance that would phase out combustion-powered lawn and garden equipment within town limits. The proposed ordinance — a new Article 10 added to Chapter 7 of the Municipal Code — would ban gas-powered leaf blowers by 2028 and all other covered equipment by 2030. The recitals cite the box canyon's particular sensitivity to noise (90–110 decibels, amplified by the terrain) and air quality impacts. Colorado's HB23-1161 already provides a 30% point-of-sale discount on electric replacements, and the San Miguel Power Association offers additional rebates up to 25%, potentially offsetting roughly half the replacement cost. Exceptions are included for pre-adoption dual-use enclosed-cab tractors. The commission also votes to formally adopt its 2027 workplan, which carries forward ongoing threads: the Climate Action Plan update, bear safety programming, Trash Bash, Green Grants, and landscaping ordinance advocacy.",
 
@@ -1119,9 +1113,6 @@ const MANUAL_SUMMARIES = {
   "telluride|2026-11-19|Liquor Licensing Authority - Nov 19 2026":
     "Three special event liquor permits are on the table for early December. The Telluride Nordic Association is requesting a permit for its annual membership party on December 2 (5:00–7:30 pm, ~50 attendees) at 300 S. Townsend St. Second Chance Humane Society follows with a holiday wreath-making workshop benefiting animal rescue on December 3 (4:00–8:30 pm, ~30–35 people) at the same location. The Town of Telluride itself is seeking a permit for its employee holiday party on December 10 (3:00–10:00 pm), also at 300 S. Townsend. Staff recommends approval on all three. The Authority will also ratify minutes from the October 14 special meeting, where permits for the Telluride Horror Show were approved.",
 
-  "ouray|2026-10-28|Board of County Commissioners Work Session":
-    "A work session — no formal votes — with two substantive conversations on the table. First, CDOT walks the commissioners through its annual planning presentation, covering what the state transportation agency has in store for the US-550 corridor and surrounding roads. Then the discussion shifts to FEMA Public Assistance, focusing on Ouray County's ongoing recovery projects and road damage assessments. Anyone who's watched mountain roads take a beating through wet cycles knows how long the repair queue can get — and how much of the funding story runs through federal reimbursement timelines.",
-
   "school|2026-11-04|Telluride Board of Education Work Session":
     "The Board of Education meets Wednesday, November 4 at 3:30 PM at Bridal Veil for a work session focused on one item: interviewing student candidates for the Student Representative seat on the school board. Each candidate gets two minutes per question, covering their motivations, how they'd gather and share peer input, how they'd elevate underrepresented student voices, and how they'd manage the time commitment — which includes twice-monthly board meetings and a Colorado Association of School Boards conference in Colorado Springs, December 3–5, 2026.",
 
@@ -1177,7 +1168,7 @@ const MANUAL_SUMMARIES = {
     "The Norwood Board of Trustees sits down for a work session on the 2027 draft budget. No formal action can be taken at a work session — this is the stage where trustees dig into the numbers before any votes. Budget season in a small mountain town is always a tight exercise, and what gets funded (and what doesn't) shapes everything from road maintenance to staffing.",
 
   "tmvoa|2026-12-03|TMVOA Board of Directors Budget Meeting #3":
-    "The December 3 TMVOA Board of Directors Budget Meeting #3 agenda hasn't been posted yet.",
+    "The Telluride Mountain Village Owners Association holds its third budget board meeting to adopt the 2027 budget by resolution — the main event. Also on the action list: approval of a SMART IGA, which connects this session directly to the ongoing gondola funding structure. The board will review the proposed 2027 meeting calendar before opening the floor to public comment. Any decisions made here head to the full Members Meeting on December 17.",
 
   "telluride|2026-12-03|Town Council Retreat - Dec 03 2026":
     "The December 3 Town Council Retreat is a single three-hour work session: a comprehensive overview of Town funds, presented by Finance staff Zach Cartya, Heather Pezzella, and Zoe Dohnal. No action items or votes are scheduled — this is a working briefing for Council, the kind of session where the numbers get laid out before the formal budget process moves forward.",
@@ -2780,6 +2771,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "'Give something with a story' by shopping handmade and locally",
+    source: "Telluride Times",
+    date: "November 27, 2026",
+    firstSeen: "2026-11-28",
+    newsTopic: "arts-culture",
+    copy: "Telluride Arts' Holiday Bazaar returns this weekend to Ah Haa's Silver Jack Building at 155 W. Pacific Ave., bringing together nearly 40 local artisans selling handmade jewelry, ceramics, woodwork, and more. The event has been a Telluride tradition for close to 50 years.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_f713c425-7307-42de-a951-3a5cb8a89d8b.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/9b/e9b47787-78e2-49f7-a09d-58ed24983b3f/6b08cc938ed8a.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Parade of Lights will illuminate Norwood",
     source: "Telluride Times",
     date: "November 27, 2026",
@@ -3535,30 +3538,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "County discusses housing mitigation impact fee",
-    source: "Telluride Times",
-    date: "November 14, 2026",
-    firstSeen: "2026-11-15",
-    newsTopic: "education",
-    copy: "San Miguel County commissioners and planners met to review three possible changes to the unincorporated county's affordable housing impact fee, which applies to new residential construction within the R-1 School District. All three options would adjust the exemption threshold and graduated mitigation rates, which currently run 18–90% of a $1,112-per-square-foot market gap figure. Some locals and one commissioner raised concerns that the fees are pricing out full-time residents looking to build free-market homes.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_7af836c2-160e-4635-ab2c-d00c9f4759e0.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/0c/b0cd5a5f-ac31-4879-a162-41cd8b2cd2f7/6af61466ddb84.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "A community-wide effort to help residents thrive",
-    source: "Telluride Times",
-    date: "November 14, 2026",
-    firstSeen: "2026-11-14",
-    newsTopic: "education",
-    copy: "San Miguel County has just 40 behavioral health providers for 7,000-plus residents, and local surveys show 74% of respondents have been directly affected by someone's substance use. Telluride High School students report binge drinking and marijuana use well above state averages. The county is now updating its behavioral health strategic plan through a collaborative process involving several new work groups.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_b8b30502-5f97-4ffc-8a9e-0fad266a25e6.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/f4/2f45c9b2-ae17-4472-aef7-1866ef201bf8/6af7667a97409.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Redvale couple killed last week in crash on Highway 141",
     source: "Telluride Times",
     date: "November 23, 2026",
@@ -3580,6 +3559,24 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
+    title: "Sign Up for the 2026 Turkey Trot!",
+    source: "San Miguel County",
+    date: "November 5, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1424",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14909"
+  },
+  {
+    title: "Black Bear and Imogene Passes Closed for the Winter",
+    source: "San Miguel County",
+    date: "November 3, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1423",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14906"
+  },
+  {
     title: "Treasurer's Office Closed Weds 11/25 - Fri 11/27",
     source: "San Miguel County",
     date: "November 24, 2026",
@@ -3589,13 +3586,13 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "Town of Telluride Offices Closed for Thanksgiving, Thursday and Friday, November 26 and 27",
-    source: "Town of Telluride",
-    date: "November 24, 2026",
+    title: "Black Bear and Imogene Passes Closed for the Winter",
+    source: "San Miguel County",
+    date: "November 3, 2026",
     newsTopic: "community",
-    copy: "The Town of Telluride's administrative offices will be closed on Thursday, November 26, and Friday, November 27, in observance of the Thanksgiving holiday.",
-    href: "https://www.telluride.gov/AlertCenter.aspx?AID=51",
-    img: ""
+    copy: "Due to changing weather conditions and the onset of winter, Imogene and Black Bear Passes are now officially closed for the season.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=551",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14906"
   },
   {
     title: "Town Reminds Residents and Businesses about Snow Removal Rules",
@@ -3611,7 +3608,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice and Call of Special Meeting of the Ridgway Town Council on November 30, 2026 - Notice dated November 23, 2026",
     source: "Town of Ridgway",
-    date: "November 27, 2026",
+    date: "November 28, 2026",
     firstSeen: "2026-11-24",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3644,7 +3641,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice of Public Hearing of the Ridgway Town Council on Dec. 9, 2026 - Notice dated November 23, 2026",
     source: "Town of Ridgway",
-    date: "November 27, 2026",
+    date: "November 28, 2026",
     firstSeen: "2026-11-24",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3655,7 +3652,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice of Introduction of Ordinance No. 05-2026 - Notice dated November 23, 2026",
     source: "Town of Ridgway",
-    date: "November 27, 2026",
+    date: "November 28, 2026",
     firstSeen: "2026-11-24",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3666,7 +3663,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice and Call of 2027 Fiscal Year Budget Meetings of the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "November 27, 2026",
+    date: "November 28, 2026",
     firstSeen: "2026-09-29",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3677,7 +3674,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Town of Ridgway, City of Ouray, and Ouray County Establish New Three-Year Affordable Housing Goals",
     source: "Town of Ridgway",
-    date: "November 27, 2026",
+    date: "November 28, 2026",
     firstSeen: "2026-10-21",
     newsTopic: "housing",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3746,14 +3743,6 @@ const KOTO_NEWSCASTS = [
     newsTopic: "housing",
     copy: "Telski Delays Opening Day; Local Communities Grapple with Affordable Housing Requirements; Coming Up Next, Telluride",
     href: "https://koto.org/news/newscast-11-16-26/"
-  },
-  {
-    title: "Newscast 11-13-26",
-    source: "KOTO Community Radio",
-    date: "November 14, 2026",
-    newsTopic: "government",
-    copy: "On this week’s Regional Roundup, we hear about an abortion ban recently approved by voters in Idaho. Then, we continue our election coverage with a look at how the climate crisis figured into this year’s midterms. We head to Arizona, where historic flooding didn’t stop Diné voters from casting their ballots. Then we travel to Montrose, Colorado, fo",
-    href: "https://koto.org/news/newscast-11-13-26/"
   }
 ];
 
@@ -4357,17 +4346,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Live Music in the Après Lounge at Mountain Lodge Telluride",
-    link: "https://koto.org/event/live-music-in-the-apres-lounge-at-mountain-lodge-telluride/2026-11-27/",
-    description: "Local live music in the Après Lounge at Mountain Lodge Telluride in Mountain Village, 4 to 7 PM on most Thursdays, Fridays and Saturdays all winter.",
-    pubDate: "2026-11-27T16:00:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Mountain Lodge Telluride, Mountain Village",
-    imageUrl: ""
-  },
-  {
     title: "Mind Blown Telluride",
     link: "https://koto.org/event/mind-blown-telluride/2026-11-27/",
     description: "Mind Blown Telluride is the Number 1 show in Telluride, Colorado. It is a \"Must See!\" One of the hottest tickets in town, selling out frequently. This show has VERY LIMITED tickets available, so everyone will experience the astonishing magic of Ty Gallenbeck up close. You will laugh, question reality, and be part of creating an experience you will not soon forget. This show is recommended for ages 12 and up.",
@@ -4886,7 +4864,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Dog • Collie, Border / Cattle Dog, Australian (Red Heeler) • Female",
     firstSeen: "2026-11-25",
     revealDate: "2026-11-25",
-    lastSeen: "2026-11-27"
+    lastSeen: "2026-11-28"
   }
 ];
 
@@ -5704,7 +5682,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
     description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
     pubDate: "2026-11-27T20:30:00.000Z",
-    endDate: "2027-01-23",
+    endDate: "2027-01-26",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -6159,18 +6137,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/54227072853717/huge/a0d50fe2ccd6f4a1fbad398eed543b67b571aef1.jpg"
   },
   {
-    title: "Ridgway Film Club - Film Screening and Discussion",
-    link: "https://events.ourayridgwayevents.com/event/ridgway-film-club-8555",
-    description: "The Ridgway Film Club hosts a free film screening at the Decker Community Room, followed by a group discussion. The specific film is announced to registered participants via email the week before the event; visit ridgwayfilmclub.wordpress.com to sign up. Sponsored by Ridgway Public Library.",
-    pubDate: "2026-12-07T02:00:00.000Z",
-    endDate: "2027-01-10",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Decker Community Room",
-    imageUrl: "https://localist-images.azureedge.net/photos/53056380145290/huge/4bc303dba2f5121125f911d9a1be0c80caa07512.jpg"
-  },
-  {
     title: "Monthly Karate in Ouray County",
     link: "https://events.ourayridgwayevents.com/event/monthly-karate-in-ouray-county",
     description: "Join Weehawken Creative Arts for Karate with Sensei Kay Briggs. We offer unlimited monthly classes in Ouray County (meaning you can attend each week in Ouray and/or Ridgway — or both). Tuition/registration is DUE the 1st week of the month. Karate class is a great way to learn skills to keep you safe, stay in shape and strong core movements. Karate believes in using it only to protect self and is taught accordingly. Whether you are new to Karate or a seasoned student, the Sensei will work with your level. Taught in the kyokushin kai-kan style, similar shotokan style of karate, we welcome new students to try this exceptional experience for your mind and body! Mixed ages --- Ages 7 through Adult (extended time for more experience) Mondays in Ouray: St. …",
@@ -6273,18 +6239,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Floating Lotus Brewery",
     imageUrl: "https://localist-images.azureedge.net/photos/54579464943680/huge/7b95501d5266ff0affe7941d02db2aef49ec04a9.jpg"
-  },
-  {
-    title: "Community Meditation",
-    link: "https://events.ourayridgwayevents.com/event/community-meditation-1981",
-    description: "Join us for a peer-led meditation series at the Decker Community Room. Free and open to the public!",
-    pubDate: "2026-12-11T01:30:00.000Z",
-    endDate: "2027-01-15",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Decker Community Room",
-    imageUrl: "https://localist-images.azureedge.net/photos/54585518387469/huge/ca4f03c43122c6d7ba856179cc7023a37cf32120.jpg"
   },
   {
     title: "Floating Lotus Music Bingo – November & December 2026",
@@ -6426,6 +6380,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/tourism-advisory-committee",
     description: "The Ouray Tourism Advisory Committee (TAC) represents a cross-section of the small businesses, nonprofits, and residents of Ouray. We educate ourselves about best practices in the tourism industry, tourism marketing, and the visitor experience. We gather input, plan, prioritize, measure, and advise the City of Ouray on the best actions to take related to the tourism industry in our community.",
     pubDate: "2026-12-23T00:30:00.000Z",
+    endDate: "2027-01-27",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -6487,6 +6442,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/54597700780563/huge/047d65730afb0fa2d75059a936390319bfcd6eb1.jpg"
+  },
+  {
+    title: "Ridgway HS Boys Basketball vs. Ouray",
+    link: "https://events.ourayridgwayevents.com/event/ridgway-hs-boys-basketball-vs-ouray",
+    description: "A high school boys basketball game between Ridgway and Ouray takes place at the Ridgway Secondary School gym. The event is open to the community, with concessions available and admission proceeds supporting the athletic program.",
+    pubDate: "2027-01-26T23:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ridgway Secondary School",
+    imageUrl: "https://localist-images.azureedge.net/photos/54471130902529/huge/06fe1a28a7ffd2ffcc61ec42b7218a95f350a2dd.jpg"
   }
 ];
 
@@ -6549,17 +6515,6 @@ const NORWOOD_EVENTS = [
 ];
 
 const MOUNTAIN_VILLAGE_EVENTS = [
-  {
-    title: "Live Music at Mountain Lodge",
-    link: "https://townofmountainvillage.com/explore/events/all-events/live-music-at-mountain-lodge/",
-    description: "Live music returns to the Après Lounge at Mountain Lodge Telluride in Mountain Village, with local acts performing most Thursdays from 4 to 7 p.m. throughout the winter season. It's a relaxed après-ski setting for enjoying live performances from the local music community.",
-    pubDate: "2026-11-26T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/50249/alloy-live-music-1800x900.jpg"
-  },
   {
     title: "Mind Blown Telluride",
     link: "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-8/",
@@ -6927,28 +6882,6 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/46449/mvwmplanetpic2.800x533.webp"
-  },
-  {
-    title: "An Outlaw Thanksgiving",
-    link: "https://www.telluride.com/event/an-outlaw-thanksgiving-at-alloy-kitchen/",
-    description: "An Outlaw Thanksgiving at Alloy Kitchen in Mountain Lodge Telluride, Mountain Village. A fire-lit Thanksgiving buffet …",
-    pubDate: "2026-11-26",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/64180/lodge-winter-2200x1237.800x533.webp"
-  },
-  {
-    title: "Turkey Trot",
-    link: "https://www.telluride.com/event/san-miguel-county-turkey-trot/",
-    description: "Join San Miguel County for the annual family holiday tradition, the  Turkey Trot 5K- Fun Run/Walk. Admission is free. …",
-    pubDate: "2026-11-26",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/43699/screenshot_2026-11-12_at_1_22_13_pm.800x533.webp"
   },
   {
     title: "Live Music at Mountain Lodge",
@@ -7879,6 +7812,23 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_ba744009-b2ab-4c5a-b98a-f9fb25c487cd.html",
     address: "335 W Colorado Avenue, Lots 1, 3, and 5, Block 1, Town of Telluride, CO",
     noticeKey: "pz-hearing-335-w-colorado-subdivision"
+  },
+  {
+    title: "Request for Proposal -- County Jail Medical Provider",
+    entity: "San Miguel County",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Request for Proposal",
+    filterTag: "public-entity",
+    summary: "San Miguel County is seeking qualified respondents for: County Jail Medical Provider.",
+    deadline: "Closes 2/20/2026",
+    expires: "2026-02-20",
+    dates: "11/28",
+    url: "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=212",
+    address: "",
+    smcBidID: "212"
   }
 ];
 

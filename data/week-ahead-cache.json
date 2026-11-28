@@ -1,22 +1,30 @@
 {
-  "hash": "944f42c1a0e70f7f5123541ba01746213e0a9fbe",
-  "lede": "The biggest item this week is a proposed town ordinance — reviewed by the Ecology Commission on December 2 — that would phase out gas-powered lawn and garden equipment in Telluride, starting with leaf blowers in 2028 and covering mowers, trimmers, and the rest by 2030. The Housing Authority Subcommittee meets the same day to decide whether to grant a deed-restricted homeowner a $160,000 capital improvement exception for a roof replacement — the kind of decision that sets precedent for how the program works in practice. The County Commissioners also hold a special session December 3 to work through 2027 budget adjustments, including wildfire mitigation funding and a Chamber seed-money request.",
+  "hash": "7d302b87b09c45ab24537f6e53b43a5bfa87551e",
+  "lede": "The week's sharpest moment is Thursday's special Town Council sitting as an appellate body on a contested HARC approval — a three-story, 34.88-foot addition at 208 S Fir Street that a neighbor has challenged, the kind of hearing that sets precedent for how construction gets reviewed in this town. Before that, Wednesday brings a proposed ordinance to phase out gas-powered lawn equipment townwide, and the TMVOA votes to adopt its 2027 budget and approve a SMART IGA tied to gondola funding. The county commissioners also hold a special session Wednesday to work through 2027 budget adjustments, including wildfire mitigation funding and a Chamber seed-money request.",
   "notable": [
     {
-      "id": 2,
-      "stake": "Proposed ordinance would ban gas lawn equipment townwide by 2030."
+      "id": 9,
+      "stake": "Council reviews contested HARC approval; outcome sets construction review precedent."
     },
     {
-      "id": 1,
-      "stake": "Board decides if deed-restricted owner can exceed capital improvement limits."
+      "id": 2,
+      "stake": "Proposed ordinance would ban gas lawn equipment townwide starting 2028."
+    },
+    {
+      "id": 4,
+      "stake": "TMVOA votes to adopt 2027 budget and approve gondola-linked SMART IGA."
+    },
+    {
+      "id": 8,
+      "stake": "BOCC decides 2027 budget amendments including wildfire mitigation and Chamber funding."
     },
     {
       "id": 0,
       "stake": "Public hearing on expanded street closure for 2027 Skijoring event."
     },
     {
-      "id": 8,
-      "stake": "County votes on 2027 budget adjustments including wildfire mitigation funds."
+      "id": 1,
+      "stake": "Housing Authority decides whether to allow $160,000 deed-restricted capital improvement exception."
     }
   ]
 }
