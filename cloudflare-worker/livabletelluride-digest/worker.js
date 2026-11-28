@@ -688,7 +688,7 @@ function denverParts(d) {
 // Digests due each Denver weekday, and the Denver hour each one goes out.
 // Morgan 2026-10-26: Past Meetings moved to early Tuesday so readers don't get
 // two emails on Monday (it was Monday 10:00, an hour after the Week Ahead).
-const SEND_DAYS = { Mon: [["weekly", 9]], Tue: [["past", 6]] };
+const SEND_DAYS = { Mon: [["weekly", 7]], Tue: [["past", 6]] };
 
 async function scheduledSend(env, dry) {
   const { weekday, hour } = denverParts(new Date());

@@ -9,7 +9,7 @@ name: Digest Scheduled Send
 # it is the retry if the Worker send fails, and confirm=SEND is the manual path.
 #
 # Sends APPROVED digests (America/Denver):
-#   - the "Week Ahead" (weekly) digest Monday at 9:00 AM
+#   - the "Week Ahead" (weekly) digest Monday at 7:00 AM (changed from 9:00 2026-11-28)
 #   - the "Past Meetings" (past) recap email Tuesday at 6:00 AM, its own opt-in
 #     list (added 2026-10-04; Monday 10:00 AM until 2026-10-26, when Morgan
 #     moved it to early Tuesday so readers don't get two emails the same day)
@@ -67,14 +67,14 @@ on:
     workflows: ["Content Refresh"]
     types: [completed]
   schedule:
-    - cron: '0 15 * * 1'    # Mon 15:00 UTC = 09:00 MDT (summer) — primary
-    - cron: '12 15 * * 1'   # Mon 15:12 UTC — backup #1
-    - cron: '27 15 * * 1'   # Mon 15:27 UTC — backup #2
-    - cron: '45 15 * * 1'   # Mon 15:45 UTC — backup #3
-    - cron: '0 16 * * 1'    # Mon 16:00 UTC = 09:00 MST (winter) — primary
-    - cron: '12 16 * * 1'   # Mon 16:12 UTC — backup #1
-    - cron: '27 16 * * 1'   # Mon 16:27 UTC — backup #2
-    - cron: '45 16 * * 1'   # Mon 16:45 UTC — backup #3
+    - cron: '0 13 * * 1'    # Mon 13:00 UTC = 07:00 MDT (summer) — primary
+    - cron: '12 13 * * 1'   # Mon 13:12 UTC — backup #1
+    - cron: '27 13 * * 1'   # Mon 13:27 UTC — backup #2
+    - cron: '45 13 * * 1'   # Mon 13:45 UTC — backup #3
+    - cron: '0 14 * * 1'    # Mon 14:00 UTC = 07:00 MST (winter) — primary
+    - cron: '12 14 * * 1'   # Mon 14:12 UTC — backup #1
+    - cron: '27 14 * * 1'   # Mon 14:27 UTC — backup #2
+    - cron: '45 14 * * 1'   # Mon 14:45 UTC — backup #3
     - cron: '0 12 * * 2'    # Tue 12:00 UTC = 06:00 MDT (summer) — Past Meetings
     - cron: '20 12 * * 2'   # Tue 12:20 UTC — Past Meetings backup
     - cron: '0 13 * * 2'    # Tue 13:00 UTC = 06:00 MST (winter) — Past Meetings
@@ -125,7 +125,7 @@ jobs:
           DOW="$(TZ='America/Denver' date +%u)"   # 1=Mon … 7=Sun
           HOUR10=$((10#$HOUR))   # strip any leading zero so bash doesn't read it as octal
           case "$DOW" in
-            1) DIGESTS='["weekly"]'; FROM=9 ;;
+            1) DIGESTS='["weekly"]'; FROM=7 ;;
             2) DIGESTS='["past"]';   FROM=6 ;;
             *) echo "Denver weekday=$DOW (not Monday or Tuesday) — skipping"; echo "go=false" >> "$GITHUB_OUTPUT"; exit 0 ;;
           esac
@@ -287,7 +287,7 @@ jobs:
               gh issue close "$NUM" --comment "Resolved: the ${DIGEST_KIND} digest went out at $NOW. Run: $RUN_URL"
             fi
           else
-            BODY="The ${DIGEST_KIND} digest's scheduled send window (weekly: Monday 9:00 AM MT; past: Tuesday 6:00 AM MT) passed without a send.
+            BODY="The ${DIGEST_KIND} digest's scheduled send window (weekly: Monday 7:00 AM MT; past: Tuesday 6:00 AM MT) passed without a send.
 
           Reason: ${SKIP_REASON:-unknown}
           Run: $RUN_URL
