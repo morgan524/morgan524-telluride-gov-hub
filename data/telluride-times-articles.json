@@ -1,5 +1,17 @@
 [
   {
+    "title": "Parade of Lights will illuminate Norwood",
+    "source": "Telluride Times",
+    "date": "November 27, 2026",
+    "firstSeen": "2026-11-27",
+    "newsTopic": "community",
+    "copy": "Norwood's Noel Night returns Friday, Dec. 4, with the Parade of Lights at 6:15 p.m., holiday markets across three venues, a turkey dinner drawing, and kazoo caroling at The Livery. Markets run Dec. 4–5 at Town Hall, NPRD, and Lone Cone Library, with 30+ vendor booths total.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/norwood_post/article_c8150b8a-13db-453e-8f92-c87660d0d08d.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/a1/5a152bed-c4a1-4e5f-93a8-201b7bce13c4/6b008be7828b0.image.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "Community helpers",
     "source": "Telluride Times",
     "date": "November 27, 2026",
@@ -788,24 +800,6 @@
     "img": ""
   },
   {
-    "title": "Sign Up for the 2026 Turkey Trot!",
-    "source": "San Miguel County",
-    "date": "November 5, 2026",
-    "newsTopic": "community",
-    "copy": "",
-    "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1424",
-    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14909"
-  },
-  {
-    "title": "Black Bear and Imogene Passes Closed for the Winter",
-    "source": "San Miguel County",
-    "date": "November 3, 2026",
-    "newsTopic": "community",
-    "copy": "",
-    "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1423",
-    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14906"
-  },
-  {
     "title": "Treasurer's Office Closed Weds 11/25 - Fri 11/27",
     "source": "San Miguel County",
     "date": "November 24, 2026",
@@ -813,15 +807,6 @@
     "copy": "The Treasurer's office will be closed Weds 11/25 - Fri 11/27.",
     "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=553",
     "img": ""
-  },
-  {
-    "title": "Black Bear and Imogene Passes Closed for the Winter",
-    "source": "San Miguel County",
-    "date": "November 3, 2026",
-    "newsTopic": "community",
-    "copy": "Due to changing weather conditions and the onset of winter, Imogene and Black Bear Passes are now officially closed for the season.",
-    "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=551",
-    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14906"
   },
   {
     "title": "Town of Telluride Offices Closed for Thanksgiving, Thursday and Friday, November 26 and 27",

@@ -1,19 +1,5 @@
 [
   {
-    "id": "TEL-A-208",
-    "name": "Yuki",
-    "species": "Dog",
-    "breed": "Shepherd, Australian",
-    "ageGroup": "Young Dog",
-    "sex": "Male",
-    "photo": "https://new-s3.shelterluv.com/profile-pictures/c067959bb239e4d7326cd9292aabdd21/f958828e485b59006c34e4c885570d98.jpeg",
-    "profileUrl": "https://www.shelterluv.com/embed/animal/214942131",
-    "summary": "Young Dog • Shepherd, Australian • Male",
-    "firstSeen": "2026-10-31",
-    "revealDate": "2026-11-02",
-    "lastSeen": "2026-11-27"
-  },
-  {
     "id": "TEL-A-209",
     "name": "Callie",
     "species": "Dog",

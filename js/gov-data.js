@@ -288,8 +288,8 @@ const SMART_CACHED_DATA = [
     time: "3:00 PM",
     title: "SMART Gondola Advisory Committee",
     location: "Virtual (Zoom link in the agenda)",
-    agendaUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/2026.11.16-Gsub-Meeting-Packet.pdf",
-    packetUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/2026.11.16_Gsub_Agenda.pdf",
+    agendaUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/2026.11.16-Gsub-Meeting-Agenda-ES.pdf",
+    packetUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/2026.11.16-Gsub-Meeting-Packet-ES.pdf",
     note: "Gondola Advisory Committee (Gsub): agenda and packet available (PDF)."
   },
   {
@@ -341,7 +341,7 @@ const TMVOA_CACHED_DATA = [
     date: "December 3, 2026",
     title: "TMVOA Board of Directors Budget Meeting #3",
     board: "board",
-    agendaUrl: null,
+    agendaUrl: "https://tmvoa.org/site/assets/files/4892/tmvoa_board_meeting_agenda_12_03_26.pdf",
     packetUrl: null,
     location: "Mountain Village, CO (see agenda for Zoom link)"
   },

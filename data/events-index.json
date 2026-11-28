@@ -14,19 +14,6 @@
     "endDate": "2027-01-23"
   },
   {
-    "title": "Up-Off Gymnastics, Dance, and Spanish",
-    "href": "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-11-27/",
-    "date": "2026-11-27",
-    "time": "10:00 AM",
-    "location": "Lone Cone Library Norwood",
-    "town": "Norwood",
-    "img": "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance,…",
-    "type": "Music"
-  },
-  {
     "title": "Ski and Board Days",
     "href": "https://www.beacontelluride.com/upcoming-events",
     "date": "2026-11-27",
@@ -723,6 +710,19 @@
     "source": "Mountain Village",
     "desc": "The Mountain Village Design Review Board meets for its monthly meeting. Meeting material is typically posted on the Friday before a scheduled meeting.",
     "type": "Community"
+  },
+  {
+    "title": "Live Music at Mountain Lodge",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/live-music-at-mountain-lodge/",
+    "date": "2026-12-03",
+    "time": "",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/50249/alloy-live-music-1800x900.jpg",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Live music returns to the Après Lounge at Mountain Lodge Telluride in Mountain Village, with local acts performing most Thursdays from 4 to 7 p.m. throughout the winter season. It's a relaxed après-ski setting for catching live…",
+    "type": "Music"
   },
   {
     "title": "Up-Off Gymnastics, Dance, and Spanish",
@@ -1605,6 +1605,19 @@
     "type": "Music"
   },
   {
+    "title": "Live Music at Mountain Lodge",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/live-music-at-mountain-lodge/",
+    "date": "2026-12-10",
+    "time": "",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/50249/alloy-live-music-1800x900.jpg",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Mountain Lodge Telluride hosts recurring live music in its Après Lounge in Mountain Village, with local acts performing most Thursdays from 4 to 7 p.m. throughout the winter season. It's a relaxed après-ski setting for catching live local…",
+    "type": "Music"
+  },
+  {
     "title": "Up-Off Gymnastics, Dance, and Spanish",
     "href": "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-12-11/",
     "date": "2026-12-11",
@@ -2054,6 +2067,19 @@
     "type": "Music"
   },
   {
+    "title": "Live Music at Mountain Lodge",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/live-music-at-mountain-lodge/",
+    "date": "2026-12-17",
+    "time": "",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/50249/alloy-live-music-1800x900.jpg",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Live music returns to the Après Lounge at Mountain Lodge Telluride in Mountain Village, with local acts taking the stage most Thursdays from 4 to 7 p.m. throughout the winter season. It's a relaxed après-ski setting for catching live…",
+    "type": "Music"
+  },
+  {
     "title": "Up-Off Gymnastics, Dance, and Spanish",
     "href": "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-12-18/",
     "date": "2026-12-18",
@@ -2339,6 +2365,19 @@
     "source": "Telluride.com",
     "desc": "The Christmas Eve Torchlight Parade will start at the top of the Gondola and head down into the Town of Telluride. …",
     "type": "Festivals"
+  },
+  {
+    "title": "Live Music at Mountain Lodge",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/live-music-at-mountain-lodge/",
+    "date": "2026-12-24",
+    "time": "",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/50249/alloy-live-music-1800x900.jpg",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Live music returns to the Après Lounge at Mountain Lodge Telluride in Mountain Village, with local acts performing most Thursdays from 4 to 7 p.m. throughout the winter season. It's a relaxed après-ski setting for catching live…",
+    "type": "Music"
   },
   {
     "title": "Ski and Board Days",
