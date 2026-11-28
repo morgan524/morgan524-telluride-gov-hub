@@ -258,6 +258,34 @@
   // `card` is the .fa-card element; it stays hidden unless the data is usable.
   // Expects children #fa-headline #fa-meta #fa-gallery #fa-blurb #fa-acts —
   // a page may omit #fa-gallery and simply gets no images.
+  // The two remote ways into a meeting: Zoom to take part, the livestream to
+  // watch. Morgan, 2026-08-19: "we always need to include the Zoom link and the
+  // YouTube link to join in" — so this is the ONE place that decides which
+  // links a featured meeting offers and what they're called. Every surface
+  // calls it and supplies its own markup (the featured card here, The Week
+  // Ahead's featured meeting in home.js); duplicating the rule per page is
+  // exactly how the livestream went unrendered for months.
+  //
+  // Takes a meeting record — data/featured-action.json's `meeting` (whose links
+  // build-featured-action.js has already resolved through an active pin and the
+  // entity-channel fallback) or a raw data/week-meetings.json row. Returns
+  // [{ kind, href, label }] in display order, empty when the meeting carries
+  // neither link.
+  function remoteWaysIn(m) {
+    if (!m) return [];
+    const ways = [];
+    if (m.zoomLink) ways.push({ kind: 'zoom', href: m.zoomLink, label: 'Join Zoom' });
+    if (m.livestream) {
+      ways.push({
+        kind: 'live',
+        href: m.livestream,
+        label: m.livestreamLabel
+          || (/youtube\.com|youtu\.be/i.test(m.livestream) ? 'Watch on YouTube' : 'Watch the Livestream'),
+      });
+    }
+    return ways;
+  }
+
   function renderFeaturedAction(card, fa) {
     if (!card || !fa) return false;
     const m = fa.meeting;
@@ -299,7 +327,14 @@
       ? '<a class="fa-live" href="' + esc(safeUrl(m.packetUrl)) + '" download target="_blank" rel="noopener">&#128230; Agenda Packet &darr;</a>'
       : '<span class="fa-empty" title="Agenda packet not yet posted" aria-disabled="true">&#128230; Agenda Packet</span>';
     if (!m.hasAgenda && (m.agendaUrl || m.link)) acts += '<a class="fa-plain" href="' + esc(safeUrl(m.agendaUrl || m.link)) + '" target="_blank" rel="noopener">Meeting info</a>';
-    if (m.zoomLink) acts += '<a class="fa-zoom" href="' + esc(safeUrl(m.zoomLink)) + '" target="_blank" rel="noopener">&#128249; Join Zoom</a>';
+    // Both remote ways in, via the one shared decision (remoteWaysIn). They
+    // share fa-zoom's blue outline so the pair reads as one "attend from home"
+    // group; the emoji is this surface's own dressing.
+    const REMOTE_ICON = { zoom: '&#128249; ', live: '&#128250; ' };
+    remoteWaysIn(m).forEach((w) => {
+      acts += '<a class="fa-zoom" href="' + esc(safeUrl(w.href)) + '" target="_blank" rel="noopener">'
+        + REMOTE_ICON[w.kind] + esc(w.label) + '</a>';
+    });
     byId('fa-acts').innerHTML = acts;
     card.style.display = 'block';
     return true;
@@ -310,7 +345,7 @@
     meetingOver: meetingOver, startMinutes: startMinutes,
     fmtDate: fmtDate, esc: esc, safeUrl: safeUrl, emphasizeNames: emphasizeNames,
     icsDataUri: icsDataUri, icsFilename: icsFilename,
-    renderFeaturedAction: renderFeaturedAction,
+    renderFeaturedAction: renderFeaturedAction, remoteWaysIn: remoteWaysIn,
     ENTITY_LOGOS: ENTITY_LOGOS, entityLogo: entityLogo, _bucket: bucket };
 
   root.LTData = api;

@@ -70,3 +70,85 @@ test('startMinutes reads the first clock time in free text', () => {
   assert.equal(LTData.startMinutes('Noon'), 12 * 60);
   assert.equal(LTData.startMinutes(''), null);
 });
+
+// ── renderFeaturedAction: the remote ways in ──────────────────────────────────
+// Morgan, 2026-08-19: "we always need to include the Zoom link and the YouTube
+// link to join in". The card used to render Zoom only, so a meeting's
+// livestream — carried in the data all along — never reached the reader.
+
+// Minimal stand-in for the #featured-action card. renderFeaturedAction reaches
+// for `document` only when card.querySelector misses, so serving every id here
+// keeps the test DOM-free.
+function fakeCard() {
+  const els = {};
+  for (const id of ['fa-headline', 'fa-meta', 'fa-blurb', 'fa-gallery', 'fa-acts']) {
+    els[id] = { textContent: '', innerHTML: '', className: '', hidden: false };
+  }
+  return { style: {}, els, querySelector: (sel) => els[sel.slice(1)] || null };
+}
+
+const featuredAction = (meeting) => ({
+  headline: 'HARC takes up the Shandoka Lot redevelopment',
+  blurb: 'A blurb.',
+  deepDive: { label: 'Carhenge / Shandoka', href: '/deep-dive-carhenge.html' },
+  meeting: Object.assign({ date: LTData.todayMT(), humanDate: 'today' }, meeting),
+});
+
+test('renderFeaturedAction renders both the Zoom and the YouTube link', () => {
+  const card = fakeCard();
+  assert.equal(LTData.renderFeaturedAction(card, featuredAction({
+    zoomLink: 'https://us06web.zoom.us/meeting/register/KKzcuKFdTuyXzpw65k2aAA',
+    livestream: 'https://www.youtube.com/@townoftelluridecolorado8739/streams',
+  })), true);
+  const acts = card.els['fa-acts'].innerHTML;
+  assert.match(acts, /href="https:\/\/us06web\.zoom\.us\/meeting\/register\/KKzcuKFdTuyXzpw65k2aAA"[^>]*>[^<]*Join Zoom</);
+  assert.match(acts, /href="https:\/\/www\.youtube\.com\/@townoftelluridecolorado8739\/streams"[^>]*>[^<]*Watch on YouTube</);
+});
+
+test('a non-YouTube livestream gets a generic label', () => {
+  const card = fakeCard();
+  LTData.renderFeaturedAction(card, featuredAction({
+    livestream: 'https://media.avcaptureall.cloud/?customerGuid=f6f590a7',
+  }));
+  assert.match(card.els['fa-acts'].innerHTML, />[^<]*Watch the Livestream</);
+});
+
+test('no livestream in the data means no livestream link', () => {
+  const card = fakeCard();
+  LTData.renderFeaturedAction(card, featuredAction({ zoomLink: 'https://us06web.zoom.us/j/1' }));
+  assert.doesNotMatch(card.els['fa-acts'].innerHTML, /Watch/);
+});
+
+// ── remoteWaysIn: the one decision both surfaces share ───────────────────────
+// Morgan, 2026-08-19: "we always need to include the Zoom link and the YouTube
+// link to join in". The featured card (renderFeaturedAction) and The Week
+// Ahead's featured meeting (home.js) both render from this, so the rule can't
+// drift between them again.
+
+test('remoteWaysIn returns both ways in, Zoom first', () => {
+  const ways = LTData.remoteWaysIn({
+    zoomLink: 'https://us06web.zoom.us/j/1',
+    livestream: 'https://www.youtube.com/@townoftelluridecolorado8739/streams',
+  });
+  assert.deepEqual(ways.map((w) => [w.kind, w.label]),
+    [['zoom', 'Join Zoom'], ['live', 'Watch on YouTube']]);
+});
+
+test('remoteWaysIn labels a non-YouTube stream generically', () => {
+  const ways = LTData.remoteWaysIn({ livestream: 'https://media.avcaptureall.cloud/?customerGuid=f6f' });
+  assert.deepEqual(ways.map((w) => w.label), ['Watch the Livestream']);
+  // youtu.be short links still count as YouTube.
+  assert.equal(LTData.remoteWaysIn({ livestream: 'https://youtu.be/abc' })[0].label, 'Watch on YouTube');
+  // A bare youtube.com host too — the label must not hinge on a leading "www.".
+  assert.equal(LTData.remoteWaysIn({ livestream: 'https://youtube.com/@x/streams' })[0].label, 'Watch on YouTube');
+});
+
+test('remoteWaysIn honours an explicit livestreamLabel', () => {
+  assert.equal(LTData.remoteWaysIn({ livestream: 'https://x.org/s', livestreamLabel: 'Watch on CivicClerk' })[0].label,
+    'Watch on CivicClerk');
+});
+
+test('remoteWaysIn offers nothing when the meeting carries neither link', () => {
+  assert.deepEqual(LTData.remoteWaysIn({ title: 'Some meeting' }), []);
+  assert.deepEqual(LTData.remoteWaysIn(null), []);
+});
