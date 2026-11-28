@@ -1,20 +1,9 @@
 [
   {
-    "title": "Thanksgiving Break - Ridgway Schools",
-    "link": "https://events.ourayridgwayevents.com/event/thanksgiving-break-ridgway-schools",
-    "description": "Thanksgiving Break for Ridgway Schools begins on this date, giving students and staff time off for the holiday. This break is a scheduled pause in the academic calendar observed by Ridgway Schools.",
-    "pubDate": "2026-11-27T07:00:00.000Z",
-    "source": "oray",
-    "sourceLabel": "Ouray Ridgway Calendar",
-    "category": "Community Event",
-    "location": "",
-    "imageUrl": "https://localist-images.azureedge.net/photos/52196842516113/huge/34c03f502c2e6b24c2bdceae7a155d7b6d463e8f.jpg"
-  },
-  {
     "title": "Gaper Contest 2026 - Voyager FUNdraiser",
     "link": "https://events.ourayridgwayevents.com/event/gaper-contest-2026",
-    "description": "A community photo contest and fundraiser for Voyager inviting locals of all ages from the northern San Juan region to submit their best gaper photos for a chance to be named Gaper of the Year. Voting takes place during Gaper Week, November 21–29, 2026, coinciding with opening week at Telluride Ski Resort, with winners determined by votes and additional criteria.",
-    "pubDate": "2026-11-27T15:00:00.000Z",
+    "description": "A community photo contest and fundraiser for Voyager inviting locals of all ages from the northern San Juan region to submit their best \"gaper\" photos for a chance to be named Gaper of the Year. Voting takes place during Gaper Week, November 21–29, 2026, coinciding with opening week at Telluride Ski Resort, with the winner determined by votes and additional criteria.",
+    "pubDate": "2026-11-28T15:00:00.000Z",
     "endDate": "2026-11-29",
     "source": "oray",
     "sourceLabel": "Ouray Ridgway Calendar",
@@ -26,25 +15,13 @@
     "title": "Guided Tour: Historic Beaumont Hotel & Spa",
     "link": "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
     "description": "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
-    "pubDate": "2026-11-27T20:30:00.000Z",
+    "pubDate": "2026-11-28T20:30:00.000Z",
     "endDate": "2027-01-26",
     "source": "oray",
     "sourceLabel": "Ouray Ridgway Calendar",
     "category": "Community Event",
     "location": "Beaumont Hotel & Spa",
     "imageUrl": "https://localist-images.azureedge.net/photos/54028675143904/huge/ebfc00389a64e579a48a893200a2e27823511c3a.jpg"
-  },
-  {
-    "title": "Familiar Grounds - Marcie Reed Whiton and Wellington Martins",
-    "link": "https://events.ourayridgwayevents.com/event/familiar-grounds-marcie-reed-whiton-and-wellington-martins",
-    "description": "Join us for Familiar Ground, an exhibition bringing together two friends and their creative lives. A celebration of the people we meet, the places we remember, and the materials that inspire us. Featuring portraits and paintings by Marcie Reed Whiton and photography and woodworking by Wellington Martins, the exhibition is meant to feel a little like walking into someone's living room: a collection of familiar faces, places, memories, and personal discoveries, all sharing the same space. It's an invitation to put your feet up, look around, and get inspired by the familiar. On view throughout November 30.",
-    "pubDate": "2026-11-28T00:00:00.000Z",
-    "endDate": "2026-12-01",
-    "source": "oray",
-    "sourceLabel": "Ouray Ridgway Calendar",
-    "category": "Community Event",
-    "location": "Space to Create Art Gallery",
-    "imageUrl": "https://localist-images.azureedge.net/photos/54472722974882/huge/75812f0dd549dfd8b3d96bcdbbbdbf4949f9ff80.jpg"
   },
   {
     "title": "Every Sat. Floating Sound Bath",
@@ -116,6 +93,17 @@
     "category": "Community Event",
     "location": "Voyager Youth Program - Ridgway Site",
     "imageUrl": "https://localist-images.azureedge.net/photos/54543483397623/huge/4f3401f8c9cf844d59fb883a46f09a6ba3e5011a.jpg"
+  },
+  {
+    "title": "Familiar Grounds - Marcie Reed Whiton and Wellington Martins",
+    "link": "https://events.ourayridgwayevents.com/event/familiar-grounds-marcie-reed-whiton-and-wellington-martins",
+    "description": "Join us for Familiar Ground, an exhibition bringing together two friends and their creative lives. A celebration of the people we meet, the places we remember, and the materials that inspire us. Featuring portraits and paintings by Marcie Reed Whiton and photography and woodworking by Wellington Martins, the exhibition is meant to feel a little like walking into someone's living room: a collection of familiar faces, places, memories, and personal discoveries, all sharing the same space. It's an invitation to put your feet up, look around, and get inspired by the familiar. On view throughout November 30.",
+    "pubDate": "2026-12-01T00:00:00.000Z",
+    "source": "oray",
+    "sourceLabel": "Ouray Ridgway Calendar",
+    "category": "Community Event",
+    "location": "Space to Create Art Gallery",
+    "imageUrl": "https://localist-images.azureedge.net/photos/54472722974882/huge/75812f0dd549dfd8b3d96bcdbbbdbf4949f9ff80.jpg"
   },
   {
     "title": "Functional Fitness - Strength & Mobility Training For Women",

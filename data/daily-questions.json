@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-11-28",
+    "title": "Should someone outside town hall review how housing gets handed out?",
+    "body": "The Housing Authority Subcommittee is weighing a request for proposals to bring in outside consultants for a comprehensive review of the town's employee rental housing policies. On one hand, an independent look might surface blind spots that insiders miss — who gets a unit, how long they keep it, what the rules actually say versus what happens in practice. On the other hand, some will wonder whether hiring consultants is just a way to delay hard decisions the town already has the authority to make. Is outside expertise the right call here, or is this one the town should work out itself?",
+    "choices": [
+      "Bring in outside eyes",
+      "Town can figure this out",
+      "Depends on the scope"
+    ],
+    "sourceUrl": "/gov-hub.html",
+    "topics": [
+      "meeting"
+    ]
+  },
+  {
     "date": "2026-11-27",
     "title": "Who gets to live in town housing — and on what terms?",
     "body": "The Telluride Housing Authority Subcommittee is moving to hire outside consultants to do a comprehensive review of the town's employee rental housing policies. That means the rules governing who qualifies, for how long, and under what conditions could be on the table.\n\nSome residents will say it's overdue — that the current policies have gaps or inequities worth fixing. Others may worry that a consultant-driven review opens the door to tightening eligibility or changing terms that working locals depend on right now.\n\nWhat do you think this review should actually be for?",
@@ -420,21 +434,6 @@
       "Bring in the outside experts",
       "Keep it local and in-house",
       "Depends on who they hire",
-      "It's complicated"
-    ],
-    "sourceUrl": "/gov-hub.html",
-    "topics": [
-      "meeting"
-    ]
-  },
-  {
-    "date": "2026-10-29",
-    "title": "Pause the open space fund — or hold the line?",
-    "body": "Council is taking up an ordinance that would suspend the 5% capital fund allocation for open space in 2027. It's a first reading, so nothing is decided yet. The argument for: the town is facing budget pressure, and a one-year pause buys room to maneuver. The argument against: open space protection is exactly what gets quietly eroded during tight years, and a suspension sets a precedent. Both sides have a point.\n\nSo — is one year off a reasonable trade-off, or does pausing the open space fund open a door that's hard to close?",
-    "choices": [
-      "One year is fine, budgets are tight",
-      "Don't touch the open space fund",
-      "Sets a bad precedent either way",
       "It's complicated"
     ],
     "sourceUrl": "/gov-hub.html",

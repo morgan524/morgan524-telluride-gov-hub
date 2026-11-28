@@ -1,30 +1,30 @@
 {
-  "hash": "7d302b87b09c45ab24537f6e53b43a5bfa87551e",
-  "lede": "The week's sharpest moment is Thursday's special Town Council sitting as an appellate body on a contested HARC approval — a three-story, 34.88-foot addition at 208 S Fir Street that a neighbor has challenged, the kind of hearing that sets precedent for how construction gets reviewed in this town. Before that, Wednesday brings a proposed ordinance to phase out gas-powered lawn equipment townwide, and the TMVOA votes to adopt its 2027 budget and approve a SMART IGA tied to gondola funding. The county commissioners also hold a special session Wednesday to work through 2027 budget adjustments, including wildfire mitigation funding and a Chamber seed-money request.",
+  "hash": "4448828dfe6a1d13b1894325d00a93e3c4e0f73d",
+  "lede": "The biggest thing on the calendar this week is Thursday's special Town Council session, where Council sits as an appellate body on a contested HARC approval for a three-story addition at 208 S Fir Street — a neighbor challenge that puts design and property rights squarely in front of elected officials. Alongside that, the TMVOA board moves to adopt its 2027 budget and vote on a SMART IGA tied to gondola funding, the Ecology Commission takes up a proposed ordinance to phase out gas-powered lawn equipment townwide, and the County holds a special BOCC session touching budget adjustments including wildfire mitigation funds and a Chamber seed-money request.",
   "notable": [
     {
       "id": 9,
-      "stake": "Council reviews contested HARC approval; outcome sets construction review precedent."
-    },
-    {
-      "id": 2,
-      "stake": "Proposed ordinance would ban gas lawn equipment townwide starting 2028."
+      "stake": "Council hears appeal of HARC's approval for a contested 3-story addition."
     },
     {
       "id": 4,
       "stake": "TMVOA votes to adopt 2027 budget and approve gondola-linked SMART IGA."
     },
     {
-      "id": 8,
-      "stake": "BOCC decides 2027 budget amendments including wildfire mitigation and Chamber funding."
+      "id": 2,
+      "stake": "Proposed ordinance would ban gas-powered lawn equipment townwide by 2030."
     },
     {
-      "id": 0,
-      "stake": "Public hearing on expanded street closure for 2027 Skijoring event."
+      "id": 8,
+      "stake": "County BOCC considers 2027 budget amendments including wildfire mitigation funding."
     },
     {
       "id": 1,
-      "stake": "Housing Authority decides whether to allow $160,000 deed-restricted capital improvement exception."
+      "stake": "Housing authority decides on a $160,000 deed-restricted capital improvement exception."
+    },
+    {
+      "id": 0,
+      "stake": "Public hearing on expanded street closure for 2027 Skijoring and Winter Celebration."
     }
   ]
 }

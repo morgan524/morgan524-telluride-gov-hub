@@ -486,6 +486,14 @@ const DEEP_DIVE_UPDATES = [];
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
   {
+    date: "2026-11-28",
+    title: "Should someone outside town hall review how housing gets handed out?",
+    body: "The Housing Authority Subcommittee is weighing a request for proposals to bring in outside consultants for a comprehensive review of the town's employee rental housing policies. On one hand, an independent look might surface blind spots that insiders miss — who gets a unit, how long they keep it, what the rules actually say versus what happens in practice. On the other hand, some will wonder whether hiring consultants is just a way to delay hard decisions the town already has the authority to make. Is outside expertise the right call here, or is this one the town should work out itself?",
+    choices: ["Bring in outside eyes", "Town can figure this out", "Depends on the scope"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
+  {
     date: "2026-11-27",
     title: "Who gets to live in town housing — and on what terms?",
     body: "The Telluride Housing Authority Subcommittee is moving to hire outside consultants to do a comprehensive review of the town's employee rental housing policies. That means the rules governing who qualifies, for how long, and under what conditions could be on the table.\n\nSome residents will say it's overdue — that the current policies have gaps or inequities worth fixing. Others may worry that a consultant-driven review opens the door to tightening eligibility or changing terms that working locals depend on right now.\n\nWhat do you think this review should actually be for?",
@@ -716,14 +724,6 @@ const DAILY_QUESTIONS = [
     choices: ["Bring in the outside experts", "Keep it local and in-house", "Depends on who they hire", "It's complicated"],
     sourceUrl: "/gov-hub.html",
     topics: ["meeting"]
-  },
-  {
-    date: "2026-10-29",
-    title: "Pause the open space fund — or hold the line?",
-    body: "Council is taking up an ordinance that would suspend the 5% capital fund allocation for open space in 2027. It's a first reading, so nothing is decided yet. The argument for: the town is facing budget pressure, and a one-year pause buys room to maneuver. The argument against: open space protection is exactly what gets quietly eroded during tight years, and a suspension sets a precedent. Both sides have a point.\n\nSo — is one year off a reasonable trade-off, or does pausing the open space fund open a door that's hard to close?",
-    choices: ["One year is fine, budgets are tight", "Don't touch the open space fund", "Sets a bad precedent either way", "It's complicated"],
-    sourceUrl: "/gov-hub.html",
-    topics: ["meeting"]
   }
 ];
 
@@ -819,6 +819,36 @@ const MEETING_PREVIEWS = {
     "Board will consider adopting the 2027 budget and approving a SMART Intergovernmental Agreement. Members will also review the 2027 proposed meeting calendar, hear public comment, and approve minutes from the November 19 meeting."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
+  {
+    title: "2026 Chamber Meeting, December",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 8, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-december/",
+    img: ""
+  },
+  {
+    title: "Noel Night",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 4, 2026",
+    newsTopic: "community",
+    copy: "Community shopping event and celebration.",
+    href: "https://norwoodcolorado.com/event/noel-night-3/",
+    img: ""
+  },
+  {
+    title: "West End Parade of Lights & Elfin Eve",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 3, 2026",
+    newsTopic: "arts-culture",
+    copy: "Holiday parade and festival.",
+    href: "https://norwoodcolorado.com/event/west-end-parade-of-lights-elfin-eve-2/",
+    img: ""
+  },
   {
     title: "Volunteers needed-Saturday, Nov. 28 at 10 am",
     source: "St. Patrick's Catholic Church",
@@ -2771,6 +2801,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Telluride Rewind",
+    source: "Telluride Times",
+    date: "November 28, 2026",
+    firstSeen: "2026-11-28",
+    newsTopic: "community",
+    copy: "Back in 1966, Telluride's 14 snowmobile owners were organizing the town's second Snow Carnival, planning races for January 1967. By 1981, a local was writing about the gap between luxury and real prosperity after a decade here. And in 1986, a new computer-controlled Doppelmayr lift opened without a hitch on the mountain.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_9065bcb3-45df-4911-bcf5-de27248740e6.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/d0/8d042745-c9de-4184-b1f2-5ea72101c7fa/6b098312533be.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "'Give something with a story' by shopping handmade and locally",
     source: "Telluride Times",
     date: "November 27, 2026",
@@ -4346,17 +4388,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Mind Blown Telluride",
-    link: "https://koto.org/event/mind-blown-telluride/2026-11-27/",
-    description: "Mind Blown Telluride is the Number 1 show in Telluride, Colorado. It is a \"Must See!\" One of the hottest tickets in town, selling out frequently. This show has VERY LIMITED tickets available, so everyone will experience the astonishing magic of Ty Gallenbeck up close. You will laugh, question reality, and be part of creating an experience you will not soon forget. This show is recommended for ages 12 and up.",
-    pubDate: "2026-11-27T19:30:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Mountain Lodge Telluride, Mountain Village",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/10/Visit-Telluride-Graphic.jpg"
-  },
-  {
     title: "Yoga with Lauren",
     link: "https://koto.org/event/yoga-with-lauren/2026-11-28/",
     description: "Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome. Muévase, respire y llénese de energía en esta dinámica clase bilingüe, dirigido por Lauren Norton, diseñada para fortalecer su cuerpo y mente. Combinando la fuerza y fluidez del pilates, el ritmo y la energía de la danza, y la presencia equilibrante del yoga y la respiración, esta sesión le dejará sintiéndose fuerte, en armonía y revitalizado/a. …",
@@ -4839,11 +4870,54 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Mountain Lodge Telluride, Mountain Village",
     imageUrl: ""
+  },
+  {
+    title: "Mind Blown Telluride",
+    link: "https://koto.org/event/mind-blown-telluride/2026-12-18/",
+    description: "Mind Blown Telluride is the Number 1 show in Telluride, Colorado. It is a \"Must See!\" One of the hottest tickets in town, selling out frequently. This show has VERY LIMITED tickets available, so everyone will experience the astonishing magic of Ty Gallenbeck up close. You will laugh, question reality, and be part of creating an experience you will not soon forget. This show is recommended for ages 12 and up.",
+    pubDate: "2026-12-18T19:30:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Mountain Lodge Telluride, Mountain Village",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/10/Visit-Telluride-Graphic.jpg"
+  },
+  {
+    title: "Live Music in the Après Lounge at Mountain Lodge Telluride",
+    link: "https://koto.org/event/live-music-in-the-apres-lounge-at-mountain-lodge-telluride/2026-12-19/",
+    description: "Local live music in the Après Lounge at Mountain Lodge Telluride in Mountain Village, 4 to 7 PM on most Thursdays, Fridays and Saturdays all winter.",
+    pubDate: "2026-12-19T16:00:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Mountain Lodge Telluride, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Craig Childs’ Dark Night 2026: ON FIRE, A Night of Storytelling, Visual Media and Poetry",
+    link: "https://koto.org/event/craig-childs-dark-night-2026-on-fire-a-night-of-storytelling-visual-media-and-poetry/",
+    description: "Doors at 6:30 PM || Event Starts at 7 PM || Seated Event Reserved Section — $29 advance Reserved seats may be selected from the seating chart and will be assigned to you after purchase. Your name will be placed on the chair(s) you purchase. General Admission — $22 advance GA seating is located behind the reserved section and is not assigned. Author and storyteller Craig Childs brings his 2026 Dark Night show, ON FIRE, to The Sherbino this December. CRAIG CHILDS has published more than a dozen critically acclaimed books, including Tracing Time: Seasons of Rock Art on the Colorado Plateau, The Secret Knowledge of Water, Atlas of a Lost World, and The Wild Dark: Finding the Night Sky in the Age of Light (Torrey House Press, May 2025). He was awarded the 2026 John Burroughs Medal for distinguished nature writing. …",
+    pubDate: "2026-12-19T18:30:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "The Sherbino, Ridgway",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/11/Craig-childs-Dec-19.png"
   }
 ];
 
 const WILKINSON_EVENTS = [
-
+  {
+    title: "Yoga With/con Lauren",
+    link: "https://telluridelibrary.libcal.com/event/17482791?hs=a",
+    description: "10:00 AM – 11:00 AM · Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome. Mu&eacute;vase, respire y ll&eacute;nese de energ&iacute;a en esta din&aacute;mica clase biling&uuml;e, dirigido por Lauren Norton, dise&ntilde;ada para fortalecer su cuerpo y mente. Combinando la fuerza y fluidez del pilates, el ritmo y la energ&iacute;a de la danza, y la presencia equilibrante del yoga y la respiraci&oacute;n, esta sesi&oacute;n le dejar&aacute; sinti&eacute;ndose fuerte, en armon&iacute;a y revitalizado/a. …",
+    pubDate: "2026-11-28T17:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_23_17_28_04.jpg"
+  }
 ];
 
 // Bot-managed by scripts/content-refresh.js Task 7 (syncHumaneSocietyAnimals).
@@ -4876,18 +4950,6 @@ const HUMANE_SOCIETY_ANIMALS = [
  * Seeded 2026-05-29 with 3 events so the Events tab shows content
  * on Day 1; bot overwrites on first run. */
 const ALIBI_EVENTS = [
-  {
-    title: "DJ Phoenix",
-    link: "https://www.alibitelluride.com/calendar#eca-event=dj-phoenix-1",
-    description: "DJ Phoenix, a 30-year veteran of the Colorado house music scene, takes the decks at The Alibi for a late-night set. Expect an experienced hand behind the turntables bringing energy to one of Telluride's favorite local venues.",
-    pubDate: "2026-11-27",
-    time: "9:00 PM",
-    source: "alibi",
-    sourceLabel: "The Alibi",
-    category: "Live Music",
-    location: "The Alibi • Telluride, CO",
-    imageUrl: "https://1v09t9hszk.ucarecd.net/ca6338a4-f816-4b2d-9519-f999c902da9f/-/crop/1877x750/0,2065/-/preview/"
-  },
   {
     title: "Private Event",
     link: "https://www.alibitelluride.com/calendar#eca-event=closed-private-event",
@@ -5655,21 +5717,10 @@ const OURAY_COUNTY_EVENTS = [
 
 const OURAY_RIDGWAY_EVENTS = [
   {
-    title: "Thanksgiving Break - Ridgway Schools",
-    link: "https://events.ourayridgwayevents.com/event/thanksgiving-break-ridgway-schools",
-    description: "Thanksgiving Break for Ridgway Schools begins on this date, giving students and staff time off for the holiday. This break is a scheduled pause in the academic calendar observed by Ridgway Schools.",
-    pubDate: "2026-11-27T07:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52196842516113/huge/34c03f502c2e6b24c2bdceae7a155d7b6d463e8f.jpg"
-  },
-  {
     title: "Gaper Contest 2026 - Voyager FUNdraiser",
     link: "https://events.ourayridgwayevents.com/event/gaper-contest-2026",
-    description: "A community photo contest and fundraiser for Voyager inviting locals of all ages from the northern San Juan region to submit their best gaper photos for a chance to be named Gaper of the Year. Voting takes place during Gaper Week, November 21–29, 2026, coinciding with opening week at Telluride Ski Resort, with winners determined by votes and additional criteria.",
-    pubDate: "2026-11-27T15:00:00.000Z",
+    description: "A community photo contest and fundraiser for Voyager inviting locals of all ages from the northern San Juan region to submit their best \"gaper\" photos for a chance to be named Gaper of the Year. Voting takes place during Gaper Week, November 21–29, 2026, coinciding with opening week at Telluride Ski Resort, with the winner determined by votes and additional criteria.",
+    pubDate: "2026-11-28T15:00:00.000Z",
     endDate: "2026-11-29",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -5681,25 +5732,13 @@ const OURAY_RIDGWAY_EVENTS = [
     title: "Guided Tour: Historic Beaumont Hotel & Spa",
     link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
     description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
-    pubDate: "2026-11-27T20:30:00.000Z",
+    pubDate: "2026-11-28T20:30:00.000Z",
     endDate: "2027-01-26",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "Beaumont Hotel & Spa",
     imageUrl: "https://localist-images.azureedge.net/photos/54028675143904/huge/ebfc00389a64e579a48a893200a2e27823511c3a.jpg"
-  },
-  {
-    title: "Familiar Grounds - Marcie Reed Whiton and Wellington Martins",
-    link: "https://events.ourayridgwayevents.com/event/familiar-grounds-marcie-reed-whiton-and-wellington-martins",
-    description: "Join us for Familiar Ground, an exhibition bringing together two friends and their creative lives. A celebration of the people we meet, the places we remember, and the materials that inspire us. Featuring portraits and paintings by Marcie Reed Whiton and photography and woodworking by Wellington Martins, the exhibition is meant to feel a little like walking into someone's living room: a collection of familiar faces, places, memories, and personal discoveries, all sharing the same space. It's an invitation to put your feet up, look around, and get inspired by the familiar. On view throughout November 30.",
-    pubDate: "2026-11-28T00:00:00.000Z",
-    endDate: "2026-12-01",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Space to Create Art Gallery",
-    imageUrl: "https://localist-images.azureedge.net/photos/54472722974882/huge/75812f0dd549dfd8b3d96bcdbbbdbf4949f9ff80.jpg"
   },
   {
     title: "Every Sat. Floating Sound Bath",
@@ -5771,6 +5810,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Voyager Youth Program - Ridgway Site",
     imageUrl: "https://localist-images.azureedge.net/photos/54543483397623/huge/4f3401f8c9cf844d59fb883a46f09a6ba3e5011a.jpg"
+  },
+  {
+    title: "Familiar Grounds - Marcie Reed Whiton and Wellington Martins",
+    link: "https://events.ourayridgwayevents.com/event/familiar-grounds-marcie-reed-whiton-and-wellington-martins",
+    description: "Join us for Familiar Ground, an exhibition bringing together two friends and their creative lives. A celebration of the people we meet, the places we remember, and the materials that inspire us. Featuring portraits and paintings by Marcie Reed Whiton and photography and woodworking by Wellington Martins, the exhibition is meant to feel a little like walking into someone's living room: a collection of familiar faces, places, memories, and personal discoveries, all sharing the same space. It's an invitation to put your feet up, look around, and get inspired by the familiar. On view throughout November 30.",
+    pubDate: "2026-12-01T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Space to Create Art Gallery",
+    imageUrl: "https://localist-images.azureedge.net/photos/54472722974882/huge/75812f0dd549dfd8b3d96bcdbbbdbf4949f9ff80.jpg"
   },
   {
     title: "Functional Fitness - Strength & Mobility Training For Women",
@@ -6516,17 +6566,6 @@ const NORWOOD_EVENTS = [
 
 const MOUNTAIN_VILLAGE_EVENTS = [
   {
-    title: "Mind Blown Telluride",
-    link: "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-8/",
-    description: "A close-up magic show featuring magician Ty Gallenbeck, held at Mountain Lodge Telluride in Mountain Village. Performances take place most Friday and Saturday nights.",
-    pubDate: "2026-11-27T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/50156/mind-blown-listing-2200x1100.jpg"
-  },
-  {
     title: "Movies Under the Stars",
     link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
     description: "Movies Under the Stars is a recurring outdoor film series hosted at the Conference Center Plaza in Mountain Village, screening on Saturday evenings at dusk. The series runs from June 13 through August 15, bringing community members together for movies in an open-air setting.",
@@ -6536,6 +6575,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
+  },
+  {
+    title: "Mind Blown Telluride",
+    link: "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
+    description: "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
+    pubDate: "2026-11-28T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
   },
   {
     title: "Bike & Brewery Tour",
@@ -6758,17 +6808,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
   },
   {
-    title: "Mind Blown Telluride",
-    link: "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
-    description: "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
-    pubDate: "2026-12-19T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
-  },
-  {
     title: "Mind Blown Telluride: Magic with Ty Gallenbeck",
     link: "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-magic-with-ty-gallenbeck/",
     description: "A close-up magic show featuring magician Ty Gallenbeck, held at Mountain Lodge Telluride in Mountain Village. The show runs most Friday and Saturday nights as an ongoing series.",
@@ -6855,6 +6894,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
+  },
+  {
+    title: "Bike & Brewery Tour",
+    link: "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
+    description: "A guided bicycle ride departing from the Mountain Lodge in Mountain Village, following the Jurassic Trail and Meadows Trail down to Telluride Brewing Co., where riders receive a complimentary beer. The route offers a scenic two-brewery experience connecting Mountain Village to town.",
+    pubDate: "2026-12-28T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
   }
 ];
 

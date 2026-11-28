@@ -1,16 +1,5 @@
 [
   {
-    "title": "Mind Blown Telluride",
-    "link": "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-8/",
-    "description": "A close-up magic show featuring magician Ty Gallenbeck, held at Mountain Lodge Telluride in Mountain Village. Performances take place most Friday and Saturday nights.",
-    "pubDate": "2026-11-27T12:00:00.000Z",
-    "source": "mv",
-    "sourceLabel": "Mountain Village",
-    "category": "Community Event",
-    "location": "Mountain Village, CO",
-    "imageUrl": "https://townofmountainvillage.com/site/assets/files/50156/mind-blown-listing-2200x1100.jpg"
-  },
-  {
     "title": "Movies Under the Stars",
     "link": "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
     "description": "Movies Under the Stars is a recurring outdoor film series hosted at the Conference Center Plaza in Mountain Village, screening on Saturday evenings at dusk. The series runs from June 13 through August 15, bringing community members together for movies in an open-air setting.",
@@ -20,6 +9,17 @@
     "category": "Community Event",
     "location": "Mountain Village, CO",
     "imageUrl": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
+  },
+  {
+    "title": "Mind Blown Telluride",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
+    "description": "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
+    "pubDate": "2026-11-28T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
   },
   {
     "title": "Bike & Brewery Tour",
@@ -242,17 +242,6 @@
     "imageUrl": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
   },
   {
-    "title": "Mind Blown Telluride",
-    "link": "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
-    "description": "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
-    "pubDate": "2026-12-19T12:00:00.000Z",
-    "source": "mv",
-    "sourceLabel": "Mountain Village",
-    "category": "Community Event",
-    "location": "Mountain Village, CO",
-    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
-  },
-  {
     "title": "Mind Blown Telluride: Magic with Ty Gallenbeck",
     "link": "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-magic-with-ty-gallenbeck/",
     "description": "A close-up magic show featuring magician Ty Gallenbeck, held at Mountain Lodge Telluride in Mountain Village. The show runs most Friday and Saturday nights as an ongoing series.",
@@ -339,5 +328,16 @@
     "category": "Community Event",
     "location": "Mountain Village, CO",
     "imageUrl": "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
+  },
+  {
+    "title": "Bike & Brewery Tour",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
+    "description": "A guided bicycle ride departing from the Mountain Lodge in Mountain Village, following the Jurassic Trail and Meadows Trail down to Telluride Brewing Co., where riders receive a complimentary beer. The route offers a scenic two-brewery experience connecting Mountain Village to town.",
+    "pubDate": "2026-12-28T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
   }
 ]

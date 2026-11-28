@@ -1,16 +1,5 @@
 [
   {
-    "title": "Mind Blown Telluride",
-    "link": "https://koto.org/event/mind-blown-telluride/2026-11-27/",
-    "description": "Mind Blown Telluride is the Number 1 show in Telluride, Colorado. It is a \"Must See!\" One of the hottest tickets in town, selling out frequently. This show has VERY LIMITED tickets available, so everyone will experience the astonishing magic of Ty Gallenbeck up close. You will laugh, question reality, and be part of creating an experience you will not soon forget. This show is recommended for ages 12 and up.",
-    "pubDate": "2026-11-27T19:30:00-07:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Mountain Lodge Telluride, Mountain Village",
-    "imageUrl": "https://koto.org/wp-content/uploads/2026/10/Visit-Telluride-Graphic.jpg"
-  },
-  {
     "title": "Yoga with Lauren",
     "link": "https://koto.org/event/yoga-with-lauren/2026-11-28/",
     "description": "Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome. Muévase, respire y llénese de energía en esta dinámica clase bilingüe, dirigido por Lauren Norton, diseñada para fortalecer su cuerpo y mente. Combinando la fuerza y fluidez del pilates, el ritmo y la energía de la danza, y la presencia equilibrante del yoga y la respiración, esta sesión le dejará sintiéndose fuerte, en armonía y revitalizado/a. …",
@@ -493,5 +482,38 @@
     "category": "Community Event",
     "location": "Mountain Lodge Telluride, Mountain Village",
     "imageUrl": ""
+  },
+  {
+    "title": "Mind Blown Telluride",
+    "link": "https://koto.org/event/mind-blown-telluride/2026-12-18/",
+    "description": "Mind Blown Telluride is the Number 1 show in Telluride, Colorado. It is a \"Must See!\" One of the hottest tickets in town, selling out frequently. This show has VERY LIMITED tickets available, so everyone will experience the astonishing magic of Ty Gallenbeck up close. You will laugh, question reality, and be part of creating an experience you will not soon forget. This show is recommended for ages 12 and up.",
+    "pubDate": "2026-12-18T19:30:00-07:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Mountain Lodge Telluride, Mountain Village",
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/10/Visit-Telluride-Graphic.jpg"
+  },
+  {
+    "title": "Live Music in the Après Lounge at Mountain Lodge Telluride",
+    "link": "https://koto.org/event/live-music-in-the-apres-lounge-at-mountain-lodge-telluride/2026-12-19/",
+    "description": "Local live music in the Après Lounge at Mountain Lodge Telluride in Mountain Village, 4 to 7 PM on most Thursdays, Fridays and Saturdays all winter.",
+    "pubDate": "2026-12-19T16:00:00-07:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Mountain Lodge Telluride, Mountain Village",
+    "imageUrl": ""
+  },
+  {
+    "title": "Craig Childs’ Dark Night 2026: ON FIRE, A Night of Storytelling, Visual Media and Poetry",
+    "link": "https://koto.org/event/craig-childs-dark-night-2026-on-fire-a-night-of-storytelling-visual-media-and-poetry/",
+    "description": "Doors at 6:30 PM || Event Starts at 7 PM || Seated Event Reserved Section — $29 advance Reserved seats may be selected from the seating chart and will be assigned to you after purchase. Your name will be placed on the chair(s) you purchase. General Admission — $22 advance GA seating is located behind the reserved section and is not assigned. Author and storyteller Craig Childs brings his 2026 Dark Night show, ON FIRE, to The Sherbino this December. CRAIG CHILDS has published more than a dozen critically acclaimed books, including Tracing Time: Seasons of Rock Art on the Colorado Plateau, The Secret Knowledge of Water, Atlas of a Lost World, and The Wild Dark: Finding the Night Sky in the Age of Light (Torrey House Press, May 2025). He was awarded the 2026 John Burroughs Medal for distinguished nature writing. …",
+    "pubDate": "2026-12-19T18:30:00-07:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "The Sherbino, Ridgway",
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/11/Craig-childs-Dec-19.png"
   }
 ]
